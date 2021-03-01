@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package billing;
+
+service Billing {
+    // Get the total or active contacts in a time range
+    rpc Total(BillingRequest) returns (BillingResponse){}
+}
+
+message BillingRequest {
+    string org_uuid = 1;
+    string before = 2;
+    string after = 3;
+}
+
+message BillingResponse {
+    int32 active_contacts = 1;
+}
