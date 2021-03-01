@@ -15,10 +15,12 @@ message Org {
     int32 id = 1;
     string name = 2;
     string uuid = 3;
-    repeated Users users = 4;
+    string timezone = 4;
+    string date_format = 5;
+    repeated User users = 6;
 }
 
-message Users {
+message User {
     int32 id = 1;
     string email = 2;
     string username = 3;
