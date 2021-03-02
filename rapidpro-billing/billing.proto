@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package billing;
 
+import "google/protobuf/timestamp.proto";
+
 service Billing {
     // Get the total or active contacts in a time range
     rpc Total(BillingRequest) returns (BillingResponse){}
@@ -9,8 +11,8 @@ service Billing {
 
 message BillingRequest {
     string org_uuid = 1;
-    string before = 2;
-    string after = 3;
+    google.protobuf.Timestamp before = 2;
+    google.protobuf.Timestamp after = 3;
 }
 
 message BillingResponse {
