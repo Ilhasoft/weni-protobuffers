@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package statistic;
+
+service OrgStatisticController {
+    rpc Retrieve(OrgStatisticRetrieveRequest) returns (OrgStatistic) {}
+}
+
+message OrgStatisticRetrieveRequest {
+    string org_uuid = 1;
+}
+
+message OrgStatistic {
+    int32 active_flows = 1;
+    int32 active_classifier = 2;
+    int32 active_contacts = 3;
+}
+
+
