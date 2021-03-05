@@ -12,7 +12,7 @@ message OrgStatisticRetrieveRequest {
 
 message OrgStatistic {
     int32 active_flows = 1;
-    int32 active_classifier = 2;
+    int32 active_classifiers = 2;
     int32 active_contacts = 3;
 }
 
