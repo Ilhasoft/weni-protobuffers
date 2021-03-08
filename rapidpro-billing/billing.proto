@@ -7,6 +7,7 @@ import "google/protobuf/timestamp.proto";
 service Billing {
     // Get the total or active contacts in a time range
     rpc Total(BillingRequest) returns (BillingResponse){}
+    rpc Detailed(BillingRequest) returns (stream DetailedBillingResponse){}
 }
 
 message BillingRequest {
@@ -17,4 +18,15 @@ message BillingRequest {
 
 message BillingResponse {
     int32 active_contacts = 1;
+}
+
+message DetailedBillingResponse {
+    string contact_uuid = 1;
+    string contact_name = 2;
+    string msg_uuid = 3;
+    string text = 4;
+    google.protobuf.Timestamp sent_on = 5;
+    string direction = 6;
+    string channel_uuid = 7;
+    string channel_name = 8;
 }
