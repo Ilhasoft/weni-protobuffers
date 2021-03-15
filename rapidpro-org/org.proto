@@ -7,6 +7,7 @@ import "google/protobuf/empty.proto";
 service OrgController {
     rpc List(OrgListRequest) returns (stream Org) {}
     rpc Create(OrgCreateRequest) returns (Org) {}
+    rpc Retrieve(OrgRetrieveRequest) returns (Org) {}
     rpc Update(OrgUpdateRequest) returns (OrgUpdateRequest) {}
     rpc Destroy(OrgDestroyRequest) returns (google.protobuf.Empty) {}
 }
@@ -15,10 +16,12 @@ message Org {
     int32 id = 1;
     string name = 2;
     string uuid = 3;
-    repeated Users users = 4;
+    string timezone = 4;
+    string date_format = 5;
+    repeated User users = 6;
 }
 
-message Users {
+message User {
     int32 id = 1;
     string email = 2;
     string username = 3;
@@ -34,6 +37,10 @@ message OrgCreateRequest {
     string name = 1;
     string timezone = 2;
     int32 user_id = 3;
+}
+
+message OrgRetrieveRequest {
+    string uuid = 1;
 }
 
 message OrgDestroyRequest {
@@ -55,3 +62,4 @@ message OrgUpdateRequest {
     optional bool is_multi_org = 11;
     optional bool is_suspended = 12;
 }
+
