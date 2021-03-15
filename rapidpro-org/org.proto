@@ -36,7 +36,7 @@ message OrgListRequest {
 message OrgCreateRequest {
     string name = 1;
     string timezone = 2;
-    int32 user_id = 3;
+    string user_email = 3;
 }
 
 message OrgRetrieveRequest {
@@ -45,12 +45,12 @@ message OrgRetrieveRequest {
 
 message OrgDestroyRequest {
     int32 id = 1;
-    int32 user_id = 2;
+    string user_email = 2;
 }
 
 message OrgUpdateRequest {
     int32 id = 1;
-    int32 user_id = 2;
+    string user_email = 2;
     optional string name = 3;
     optional string timezone = 4;
     optional string date_format = 5;
@@ -62,4 +62,3 @@ message OrgUpdateRequest {
     optional bool is_multi_org = 11;
     optional bool is_suspended = 12;
 }
-
