@@ -37,6 +37,7 @@ message OrgCreateRequest {
     string name = 1;
     string timezone = 2;
     string user_email = 3;
+    string username = 4;
 }
 
 message OrgRetrieveRequest {
@@ -62,4 +63,3 @@ message OrgUpdateRequest {
     optional bool is_multi_org = 11;
     optional bool is_suspended = 12;
 }
-
