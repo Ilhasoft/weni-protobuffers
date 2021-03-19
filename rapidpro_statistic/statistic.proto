@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package statistic;
+package weni.rapidpro.statistic;
 
 service OrgStatisticController {
     rpc Retrieve(OrgStatisticRetrieveRequest) returns (OrgStatistic) {}
