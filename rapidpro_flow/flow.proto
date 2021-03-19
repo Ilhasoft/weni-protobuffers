@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package flow;
+package weni.rapidpro.flow;
 
 service FlowController {
     rpc List(FlowListRequest) returns (stream Flow) {}
