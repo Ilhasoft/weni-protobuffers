@@ -10,6 +10,7 @@ service UserPermissionController {
 
 service UserController {
     rpc Retrieve(UserRetrieveRequest) returns (User) {}
+    rpc Update(UpdateUserLang) returns (User) {}
 }
 
 message UserPermissionRetrieveRequest {
@@ -32,6 +33,11 @@ message Permission {
 
 message UserRetrieveRequest {
     string email = 1;
+}
+
+message UpdateUserLang {
+    string email = 1;
+    string language = 2;
 }
 
 message User {
