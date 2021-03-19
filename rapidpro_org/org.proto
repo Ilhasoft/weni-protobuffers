@@ -45,12 +45,12 @@ message OrgRetrieveRequest {
 }
 
 message OrgDestroyRequest {
-    int32 id = 1;
+    string uuid = 1;
     string user_email = 2;
 }
 
 message OrgUpdateRequest {
-    int32 id = 1;
+    string uuid = 1;
     string user_email = 2;
     optional string name = 3;
     optional string timezone = 4;
