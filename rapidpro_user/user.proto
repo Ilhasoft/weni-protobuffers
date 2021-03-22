@@ -15,11 +15,11 @@ service UserController {
 
 message UserPermissionRetrieveRequest {
     int32 user_id = 1;
-    int32 org_id = 2;
+    string org_uuid = 2;
 }
 
 message UserPermissionUpdateRequest {
-    int32 org_id = 1;
+    string org_uuid = 1;
     int32 user_id = 2;
     string permission = 3;
 }
