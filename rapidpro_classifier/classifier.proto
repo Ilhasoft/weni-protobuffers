@@ -8,6 +8,7 @@ service ClassifierController {
 
 message ClassifierListRequest {
     string org_uuid = 1;
+    optional string classifier_type = 2;
 }
 
 message Classifier {
