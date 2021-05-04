@@ -3,6 +3,7 @@ syntax = "proto3";
 package weni.rapidpro.classifier;
 
 service ClassifierController {
+    rpc Create(ClassifierCreateRequest) returns (Classifier) {}
     rpc List(ClassifierListRequest) returns (stream Classifier) {}
 }
 
@@ -15,4 +16,11 @@ message Classifier {
     string uuid = 1;
     string classifier_type = 2;
     string name = 3;
+}
+
+message ClassifierCreateRequest {
+    string org_uuid = 1;
+    string user_email = 2;
+    string classifier_type = 4;
+    string name = 5;
 }
