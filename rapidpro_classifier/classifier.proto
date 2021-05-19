@@ -16,6 +16,7 @@ message Classifier {
     string uuid = 1;
     string classifier_type = 2;
     string name = 3;
+    string access_token = 4;
 }
 
 message ClassifierCreateRequest {
@@ -23,4 +24,5 @@ message ClassifierCreateRequest {
     string user = 2;
     string classifier_type = 4;
     string name = 5;
+    string access_token = 6;
 }
