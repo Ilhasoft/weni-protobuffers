@@ -5,6 +5,7 @@ package weni.rapidpro.classifier;
 service ClassifierController {
     rpc Create(ClassifierCreateRequest) returns (Classifier) {}
     rpc List(ClassifierListRequest) returns (stream Classifier) {}
+    rpc Retrieve(ClassifierRetrieveRequest) returns (Classifier) {}
 }
 
 message ClassifierListRequest {
@@ -25,4 +26,8 @@ message ClassifierCreateRequest {
     string classifier_type = 4;
     string name = 5;
     string access_token = 6;
+}
+
+message ClassifierRetrieveRequest{
+    string uuid = 1;
 }
