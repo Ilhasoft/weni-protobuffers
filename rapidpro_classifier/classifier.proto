@@ -2,9 +2,12 @@ syntax = "proto3";
 
 package weni.rapidpro.classifier;
 
+import "google/protobuf/empty.proto";
+
 service ClassifierController {
     rpc Create(ClassifierCreateRequest) returns (Classifier) {}
     rpc Retrieve(ClassifierRetrieveRequest) returns (Classifier) {}
+    rpc Destroy(ClassifierDestroyRequest) returns (google.protobuf.Empty) {}
     rpc List(ClassifierListRequest) returns (stream Classifier) {}
 }
 
@@ -30,6 +33,10 @@ message ClassifierCreateRequest {
     string access_token = 6;
 }
 
-message ClassifierRetrieveRequest{
+message ClassifierRetrieveRequest {
+    string uuid = 1;
+}
+
+message ClassifierDestroyRequest {
     string uuid = 1;
 }
