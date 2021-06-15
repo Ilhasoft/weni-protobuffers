@@ -10,7 +10,8 @@ service ClassifierController {
 
 message ClassifierListRequest {
     string org_uuid = 1;
-    optional string classifier_type = 2;
+    bool is_active = 2;
+    optional string classifier_type = 3;
 }
 
 message Classifier {
@@ -18,6 +19,7 @@ message Classifier {
     string classifier_type = 2;
     string name = 3;
     string access_token = 4;
+    bool is_active = 5;
 }
 
 message ClassifierCreateRequest {
