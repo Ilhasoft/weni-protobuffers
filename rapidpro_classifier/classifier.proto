@@ -4,8 +4,8 @@ package weni.rapidpro.classifier;
 
 service ClassifierController {
     rpc Create(ClassifierCreateRequest) returns (Classifier) {}
-    rpc List(ClassifierListRequest) returns (stream Classifier) {}
     rpc Retrieve(ClassifierRetrieveRequest) returns (Classifier) {}
+    rpc List(ClassifierListRequest) returns (stream Classifier) {}
 }
 
 message ClassifierListRequest {
