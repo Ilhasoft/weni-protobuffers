@@ -28,9 +28,9 @@ message Classifier {
 message ClassifierCreateRequest {
     string org = 1;
     string user = 2;
-    string classifier_type = 4;
-    string name = 5;
-    string access_token = 6;
+    string classifier_type = 3;
+    string name = 4;
+    string access_token = 5;
 }
 
 message ClassifierRetrieveRequest {
