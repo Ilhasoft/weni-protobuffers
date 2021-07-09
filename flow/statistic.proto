@@ -15,5 +15,3 @@ message OrgStatistic {
     int32 active_classifiers = 2;
     int32 active_contacts = 3;
 }
-
-
