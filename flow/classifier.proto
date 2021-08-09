@@ -39,4 +39,5 @@ message ClassifierRetrieveRequest {
 
 message ClassifierDestroyRequest {
     string uuid = 1;
+    string user_email = 2;
 }
