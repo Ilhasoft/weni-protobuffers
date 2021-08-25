@@ -8,7 +8,7 @@ service OrgController {
     rpc List(OrgListRequest) returns (stream Org) {}
     rpc Create(OrgCreateRequest) returns (Org) {}
     rpc Retrieve(OrgRetrieveRequest) returns (Org) {}
-    rpc Update(OrgUpdateRequest) returns (OrgUpdateRequest) {}
+    rpc Update(OrgUpdateRequest) returns (Org) {}
     rpc Destroy(OrgDestroyRequest) returns (google.protobuf.Empty) {}
 }
 
@@ -50,7 +50,7 @@ message OrgDestroyRequest {
 
 message OrgUpdateRequest {
     string uuid = 1;
-    string user_email = 2;
+    optional string modified_by = 2;
     optional string name = 3;
     optional string timezone = 4;
     optional string date_format = 5;
