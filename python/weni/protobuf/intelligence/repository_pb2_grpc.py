@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from weni.protobuf.inteligence import repository_pb2 as weni_dot_protobuf_dot_inteligence_dot_repository__pb2
+from weni.protobuf.intelligence import repository_pb2 as weni_dot_protobuf_dot_intelligence_dot_repository__pb2
 
 
 class RepositoryControllerStub(object):
@@ -16,13 +16,13 @@ class RepositoryControllerStub(object):
         """
         self.List = channel.unary_stream(
                 '/weni.bothub.repository.RepositoryController/List',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_repository__pb2.RepositoryListRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_repository__pb2.Repository.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_repository__pb2.RepositoryListRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_repository__pb2.Repository.FromString,
                 )
         self.RetrieveAuthorization = channel.unary_unary(
                 '/weni.bothub.repository.RepositoryController/RetrieveAuthorization',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_repository__pb2.RepositoryAuthorizationRetrieveRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_repository__pb2.Repository.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_repository__pb2.RepositoryAuthorizationRetrieveRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_repository__pb2.Repository.FromString,
                 )
 
 
@@ -46,13 +46,13 @@ def add_RepositoryControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'List': grpc.unary_stream_rpc_method_handler(
                     servicer.List,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_repository__pb2.RepositoryListRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_repository__pb2.Repository.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_repository__pb2.RepositoryListRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_repository__pb2.Repository.SerializeToString,
             ),
             'RetrieveAuthorization': grpc.unary_unary_rpc_method_handler(
                     servicer.RetrieveAuthorization,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_repository__pb2.RepositoryAuthorizationRetrieveRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_repository__pb2.Repository.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_repository__pb2.RepositoryAuthorizationRetrieveRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_repository__pb2.Repository.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -76,8 +76,8 @@ class RepositoryController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_stream(request, target, '/weni.bothub.repository.RepositoryController/List',
-            weni_dot_protobuf_dot_inteligence_dot_repository__pb2.RepositoryListRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_repository__pb2.Repository.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_repository__pb2.RepositoryListRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_repository__pb2.Repository.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -93,7 +93,7 @@ class RepositoryController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.repository.RepositoryController/RetrieveAuthorization',
-            weni_dot_protobuf_dot_inteligence_dot_repository__pb2.RepositoryAuthorizationRetrieveRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_repository__pb2.Repository.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_repository__pb2.RepositoryAuthorizationRetrieveRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_repository__pb2.Repository.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

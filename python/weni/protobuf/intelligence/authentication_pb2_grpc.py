@@ -3,7 +3,7 @@
 import grpc
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from weni.protobuf.inteligence import authentication_pb2 as weni_dot_protobuf_dot_inteligence_dot_authentication__pb2
+from weni.protobuf.intelligence import authentication_pb2 as weni_dot_protobuf_dot_intelligence_dot_authentication__pb2
 
 
 class UserPermissionControllerStub(object):
@@ -17,17 +17,17 @@ class UserPermissionControllerStub(object):
         """
         self.Retrieve = channel.unary_unary(
                 '/weni.bothub.authentication.UserPermissionController/Retrieve',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionRetrieveRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.Permission.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionRetrieveRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.Permission.FromString,
                 )
         self.Update = channel.unary_unary(
                 '/weni.bothub.authentication.UserPermissionController/Update',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionUpdateRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.Permission.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionUpdateRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.Permission.FromString,
                 )
         self.Remove = channel.unary_unary(
                 '/weni.bothub.authentication.UserPermissionController/Remove',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionRemoveRequest.SerializeToString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionRemoveRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
 
@@ -58,17 +58,17 @@ def add_UserPermissionControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Retrieve': grpc.unary_unary_rpc_method_handler(
                     servicer.Retrieve,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionRetrieveRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.Permission.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionRetrieveRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.Permission.SerializeToString,
             ),
             'Update': grpc.unary_unary_rpc_method_handler(
                     servicer.Update,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionUpdateRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.Permission.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionUpdateRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.Permission.SerializeToString,
             ),
             'Remove': grpc.unary_unary_rpc_method_handler(
                     servicer.Remove,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionRemoveRequest.FromString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionRemoveRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
     }
@@ -93,8 +93,8 @@ class UserPermissionController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.authentication.UserPermissionController/Retrieve',
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionRetrieveRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.Permission.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionRetrieveRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.Permission.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -110,8 +110,8 @@ class UserPermissionController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.authentication.UserPermissionController/Update',
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionUpdateRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.Permission.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionUpdateRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.Permission.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -127,7 +127,7 @@ class UserPermissionController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.authentication.UserPermissionController/Remove',
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserPermissionRemoveRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserPermissionRemoveRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
@@ -144,8 +144,8 @@ class UserControllerStub(object):
         """
         self.Retrieve = channel.unary_unary(
                 '/weni.bothub.authentication.UserController/Retrieve',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserRetrieveRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.User.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserRetrieveRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.User.FromString,
                 )
 
 
@@ -163,8 +163,8 @@ def add_UserControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Retrieve': grpc.unary_unary_rpc_method_handler(
                     servicer.Retrieve,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserRetrieveRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.User.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserRetrieveRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.User.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -188,8 +188,8 @@ class UserController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.authentication.UserController/Retrieve',
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserRetrieveRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.User.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserRetrieveRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.User.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -205,8 +205,8 @@ class UserLanguageControllerStub(object):
         """
         self.Update = channel.unary_unary(
                 '/weni.bothub.authentication.UserLanguageController/Update',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserLanguageUpdateRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.User.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserLanguageUpdateRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.User.FromString,
                 )
 
 
@@ -224,8 +224,8 @@ def add_UserLanguageControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Update': grpc.unary_unary_rpc_method_handler(
                     servicer.Update,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserLanguageUpdateRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.User.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserLanguageUpdateRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.User.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -249,7 +249,7 @@ class UserLanguageController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.authentication.UserLanguageController/Update',
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.UserLanguageUpdateRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_authentication__pb2.User.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.UserLanguageUpdateRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_authentication__pb2.User.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

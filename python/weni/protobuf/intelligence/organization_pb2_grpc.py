@@ -3,7 +3,7 @@
 import grpc
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from weni.protobuf.inteligence import organization_pb2 as weni_dot_protobuf_dot_inteligence_dot_organization__pb2
+from weni.protobuf.intelligence import organization_pb2 as weni_dot_protobuf_dot_intelligence_dot_organization__pb2
 
 
 class OrgControllerStub(object):
@@ -17,28 +17,28 @@ class OrgControllerStub(object):
         """
         self.List = channel.unary_stream(
                 '/weni.bothub.org.OrgController/List',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgListRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.Org.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgListRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.Org.FromString,
                 )
         self.Create = channel.unary_unary(
                 '/weni.bothub.org.OrgController/Create',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgCreateRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.Org.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgCreateRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.Org.FromString,
                 )
         self.Update = channel.unary_unary(
                 '/weni.bothub.org.OrgController/Update',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgUpdateRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgUpdateRequest.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgUpdateRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgUpdateRequest.FromString,
                 )
         self.Destroy = channel.unary_unary(
                 '/weni.bothub.org.OrgController/Destroy',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgDestroyRequest.SerializeToString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgDestroyRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
         self.Retrieve = channel.unary_unary(
                 '/weni.bothub.org.OrgController/Retrieve',
-                request_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgStatisticRetrieveRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgStatistic.FromString,
+                request_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgStatisticRetrieveRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgStatistic.FromString,
                 )
 
 
@@ -80,28 +80,28 @@ def add_OrgControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'List': grpc.unary_stream_rpc_method_handler(
                     servicer.List,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgListRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.Org.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgListRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.Org.SerializeToString,
             ),
             'Create': grpc.unary_unary_rpc_method_handler(
                     servicer.Create,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgCreateRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.Org.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgCreateRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.Org.SerializeToString,
             ),
             'Update': grpc.unary_unary_rpc_method_handler(
                     servicer.Update,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgUpdateRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgUpdateRequest.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgUpdateRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgUpdateRequest.SerializeToString,
             ),
             'Destroy': grpc.unary_unary_rpc_method_handler(
                     servicer.Destroy,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgDestroyRequest.FromString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgDestroyRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
             'Retrieve': grpc.unary_unary_rpc_method_handler(
                     servicer.Retrieve,
-                    request_deserializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgStatisticRetrieveRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgStatistic.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgStatisticRetrieveRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgStatistic.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -125,8 +125,8 @@ class OrgController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_stream(request, target, '/weni.bothub.org.OrgController/List',
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgListRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.Org.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgListRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.Org.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -142,8 +142,8 @@ class OrgController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.org.OrgController/Create',
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgCreateRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.Org.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgCreateRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.Org.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -159,8 +159,8 @@ class OrgController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.org.OrgController/Update',
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgUpdateRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgUpdateRequest.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgUpdateRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgUpdateRequest.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -176,7 +176,7 @@ class OrgController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.org.OrgController/Destroy',
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgDestroyRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgDestroyRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
@@ -193,7 +193,7 @@ class OrgController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.bothub.org.OrgController/Retrieve',
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgStatisticRetrieveRequest.SerializeToString,
-            weni_dot_protobuf_dot_inteligence_dot_organization__pb2.OrgStatistic.FromString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgStatisticRetrieveRequest.SerializeToString,
+            weni_dot_protobuf_dot_intelligence_dot_organization__pb2.OrgStatistic.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
