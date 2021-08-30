@@ -15,11 +15,11 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='weni/protobuf/flows/user.proto',
-  package='weni.rapidpro.user',
+  package='weni.flows.user',
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1eweni/protobuf/flows/user.proto\x12\x12weni.rapidpro.user\"E\n\x1dUserPermissionRetrieveRequest\x12\x12\n\nuser_email\x18\x01 \x01(\t\x12\x10\n\x08org_uuid\x18\x02 \x01(\t\"W\n\x1bUserPermissionUpdateRequest\x12\x10\n\x08org_uuid\x18\x01 \x01(\t\x12\x12\n\nuser_email\x18\x02 \x01(\t\x12\x12\n\npermission\x18\x03 \x01(\t\"U\n\nPermission\x12\x15\n\radministrator\x18\x01 \x01(\x08\x12\x0e\n\x06viewer\x18\x02 \x01(\x08\x12\x0e\n\x06\x65\x64itor\x18\x03 \x01(\x08\x12\x10\n\x08surveyor\x18\x04 \x01(\x08\"$\n\x13UserRetrieveRequest\x12\r\n\x05\x65mail\x18\x01 \x01(\t\"1\n\x0eUpdateUserLang\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\t\"\x98\x01\n\x04User\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05\x65mail\x18\x02 \x01(\t\x12\x10\n\x08username\x18\x03 \x01(\t\x12\x12\n\nfirst_name\x18\x04 \x01(\t\x12\x11\n\tlast_name\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x61te_joined\x18\x06 \x01(\t\x12\x11\n\tis_active\x18\x07 \x01(\x08\x12\x14\n\x0cis_superuser\x18\x08 \x01(\x08\x32\xb5\x02\n\x18UserPermissionController\x12_\n\x08Retrieve\x12\x31.weni.rapidpro.user.UserPermissionRetrieveRequest\x1a\x1e.weni.rapidpro.user.Permission\"\x00\x12[\n\x06Update\x12/.weni.rapidpro.user.UserPermissionUpdateRequest\x1a\x1e.weni.rapidpro.user.Permission\"\x00\x12[\n\x06Remove\x12/.weni.rapidpro.user.UserPermissionUpdateRequest\x1a\x1e.weni.rapidpro.user.Permission\"\x00\x32\xab\x01\n\x0eUserController\x12O\n\x08Retrieve\x12\'.weni.rapidpro.user.UserRetrieveRequest\x1a\x18.weni.rapidpro.user.User\"\x00\x12H\n\x06Update\x12\".weni.rapidpro.user.UpdateUserLang\x1a\x18.weni.rapidpro.user.User\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x1eweni/protobuf/flows/user.proto\x12\x0fweni.flows.user\"E\n\x1dUserPermissionRetrieveRequest\x12\x12\n\nuser_email\x18\x01 \x01(\t\x12\x10\n\x08org_uuid\x18\x02 \x01(\t\"W\n\x1bUserPermissionUpdateRequest\x12\x10\n\x08org_uuid\x18\x01 \x01(\t\x12\x12\n\nuser_email\x18\x02 \x01(\t\x12\x12\n\npermission\x18\x03 \x01(\t\"U\n\nPermission\x12\x15\n\radministrator\x18\x01 \x01(\x08\x12\x0e\n\x06viewer\x18\x02 \x01(\x08\x12\x0e\n\x06\x65\x64itor\x18\x03 \x01(\x08\x12\x10\n\x08surveyor\x18\x04 \x01(\x08\"$\n\x13UserRetrieveRequest\x12\r\n\x05\x65mail\x18\x01 \x01(\t\"1\n\x0eUpdateUserLang\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x10\n\x08language\x18\x02 \x01(\t\"\x98\x01\n\x04User\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05\x65mail\x18\x02 \x01(\t\x12\x10\n\x08username\x18\x03 \x01(\t\x12\x12\n\nfirst_name\x18\x04 \x01(\t\x12\x11\n\tlast_name\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x61te_joined\x18\x06 \x01(\t\x12\x11\n\tis_active\x18\x07 \x01(\x08\x12\x14\n\x0cis_superuser\x18\x08 \x01(\x08\x32\xa3\x02\n\x18UserPermissionController\x12Y\n\x08Retrieve\x12..weni.flows.user.UserPermissionRetrieveRequest\x1a\x1b.weni.flows.user.Permission\"\x00\x12U\n\x06Update\x12,.weni.flows.user.UserPermissionUpdateRequest\x1a\x1b.weni.flows.user.Permission\"\x00\x12U\n\x06Remove\x12,.weni.flows.user.UserPermissionUpdateRequest\x1a\x1b.weni.flows.user.Permission\"\x00\x32\x9f\x01\n\x0eUserController\x12I\n\x08Retrieve\x12$.weni.flows.user.UserRetrieveRequest\x1a\x15.weni.flows.user.User\"\x00\x12\x42\n\x06Update\x12\x1f.weni.flows.user.UpdateUserLang\x1a\x15.weni.flows.user.User\"\x00\x62\x06proto3'
 )
 
 
@@ -27,21 +27,21 @@ DESCRIPTOR = _descriptor.FileDescriptor(
 
 _USERPERMISSIONRETRIEVEREQUEST = _descriptor.Descriptor(
   name='UserPermissionRetrieveRequest',
-  full_name='weni.rapidpro.user.UserPermissionRetrieveRequest',
+  full_name='weni.flows.user.UserPermissionRetrieveRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_email', full_name='weni.rapidpro.user.UserPermissionRetrieveRequest.user_email', index=0,
+      name='user_email', full_name='weni.flows.user.UserPermissionRetrieveRequest.user_email', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='org_uuid', full_name='weni.rapidpro.user.UserPermissionRetrieveRequest.org_uuid', index=1,
+      name='org_uuid', full_name='weni.flows.user.UserPermissionRetrieveRequest.org_uuid', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -59,35 +59,35 @@ _USERPERMISSIONRETRIEVEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=54,
-  serialized_end=123,
+  serialized_start=51,
+  serialized_end=120,
 )
 
 
 _USERPERMISSIONUPDATEREQUEST = _descriptor.Descriptor(
   name='UserPermissionUpdateRequest',
-  full_name='weni.rapidpro.user.UserPermissionUpdateRequest',
+  full_name='weni.flows.user.UserPermissionUpdateRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='org_uuid', full_name='weni.rapidpro.user.UserPermissionUpdateRequest.org_uuid', index=0,
+      name='org_uuid', full_name='weni.flows.user.UserPermissionUpdateRequest.org_uuid', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='user_email', full_name='weni.rapidpro.user.UserPermissionUpdateRequest.user_email', index=1,
+      name='user_email', full_name='weni.flows.user.UserPermissionUpdateRequest.user_email', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='permission', full_name='weni.rapidpro.user.UserPermissionUpdateRequest.permission', index=2,
+      name='permission', full_name='weni.flows.user.UserPermissionUpdateRequest.permission', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -105,42 +105,42 @@ _USERPERMISSIONUPDATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=125,
-  serialized_end=212,
+  serialized_start=122,
+  serialized_end=209,
 )
 
 
 _PERMISSION = _descriptor.Descriptor(
   name='Permission',
-  full_name='weni.rapidpro.user.Permission',
+  full_name='weni.flows.user.Permission',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='administrator', full_name='weni.rapidpro.user.Permission.administrator', index=0,
+      name='administrator', full_name='weni.flows.user.Permission.administrator', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='viewer', full_name='weni.rapidpro.user.Permission.viewer', index=1,
+      name='viewer', full_name='weni.flows.user.Permission.viewer', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='editor', full_name='weni.rapidpro.user.Permission.editor', index=2,
+      name='editor', full_name='weni.flows.user.Permission.editor', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='surveyor', full_name='weni.rapidpro.user.Permission.surveyor', index=3,
+      name='surveyor', full_name='weni.flows.user.Permission.surveyor', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -158,21 +158,21 @@ _PERMISSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=214,
-  serialized_end=299,
+  serialized_start=211,
+  serialized_end=296,
 )
 
 
 _USERRETRIEVEREQUEST = _descriptor.Descriptor(
   name='UserRetrieveRequest',
-  full_name='weni.rapidpro.user.UserRetrieveRequest',
+  full_name='weni.flows.user.UserRetrieveRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='email', full_name='weni.rapidpro.user.UserRetrieveRequest.email', index=0,
+      name='email', full_name='weni.flows.user.UserRetrieveRequest.email', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -190,28 +190,28 @@ _USERRETRIEVEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=301,
-  serialized_end=337,
+  serialized_start=298,
+  serialized_end=334,
 )
 
 
 _UPDATEUSERLANG = _descriptor.Descriptor(
   name='UpdateUserLang',
-  full_name='weni.rapidpro.user.UpdateUserLang',
+  full_name='weni.flows.user.UpdateUserLang',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='email', full_name='weni.rapidpro.user.UpdateUserLang.email', index=0,
+      name='email', full_name='weni.flows.user.UpdateUserLang.email', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='language', full_name='weni.rapidpro.user.UpdateUserLang.language', index=1,
+      name='language', full_name='weni.flows.user.UpdateUserLang.language', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -229,70 +229,70 @@ _UPDATEUSERLANG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=339,
-  serialized_end=388,
+  serialized_start=336,
+  serialized_end=385,
 )
 
 
 _USER = _descriptor.Descriptor(
   name='User',
-  full_name='weni.rapidpro.user.User',
+  full_name='weni.flows.user.User',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='weni.rapidpro.user.User.id', index=0,
+      name='id', full_name='weni.flows.user.User.id', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='email', full_name='weni.rapidpro.user.User.email', index=1,
+      name='email', full_name='weni.flows.user.User.email', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='username', full_name='weni.rapidpro.user.User.username', index=2,
+      name='username', full_name='weni.flows.user.User.username', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='first_name', full_name='weni.rapidpro.user.User.first_name', index=3,
+      name='first_name', full_name='weni.flows.user.User.first_name', index=3,
       number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='last_name', full_name='weni.rapidpro.user.User.last_name', index=4,
+      name='last_name', full_name='weni.flows.user.User.last_name', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='date_joined', full_name='weni.rapidpro.user.User.date_joined', index=5,
+      name='date_joined', full_name='weni.flows.user.User.date_joined', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='is_active', full_name='weni.rapidpro.user.User.is_active', index=6,
+      name='is_active', full_name='weni.flows.user.User.is_active', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='is_superuser', full_name='weni.rapidpro.user.User.is_superuser', index=7,
+      name='is_superuser', full_name='weni.flows.user.User.is_superuser', index=7,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -310,8 +310,8 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=391,
-  serialized_end=543,
+  serialized_start=388,
+  serialized_end=540,
 )
 
 DESCRIPTOR.message_types_by_name['UserPermissionRetrieveRequest'] = _USERPERMISSIONRETRIEVEREQUEST
@@ -325,42 +325,42 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 UserPermissionRetrieveRequest = _reflection.GeneratedProtocolMessageType('UserPermissionRetrieveRequest', (_message.Message,), {
   'DESCRIPTOR' : _USERPERMISSIONRETRIEVEREQUEST,
   '__module__' : 'weni.protobuf.flows.user_pb2'
-  # @@protoc_insertion_point(class_scope:weni.rapidpro.user.UserPermissionRetrieveRequest)
+  # @@protoc_insertion_point(class_scope:weni.flows.user.UserPermissionRetrieveRequest)
   })
 _sym_db.RegisterMessage(UserPermissionRetrieveRequest)
 
 UserPermissionUpdateRequest = _reflection.GeneratedProtocolMessageType('UserPermissionUpdateRequest', (_message.Message,), {
   'DESCRIPTOR' : _USERPERMISSIONUPDATEREQUEST,
   '__module__' : 'weni.protobuf.flows.user_pb2'
-  # @@protoc_insertion_point(class_scope:weni.rapidpro.user.UserPermissionUpdateRequest)
+  # @@protoc_insertion_point(class_scope:weni.flows.user.UserPermissionUpdateRequest)
   })
 _sym_db.RegisterMessage(UserPermissionUpdateRequest)
 
 Permission = _reflection.GeneratedProtocolMessageType('Permission', (_message.Message,), {
   'DESCRIPTOR' : _PERMISSION,
   '__module__' : 'weni.protobuf.flows.user_pb2'
-  # @@protoc_insertion_point(class_scope:weni.rapidpro.user.Permission)
+  # @@protoc_insertion_point(class_scope:weni.flows.user.Permission)
   })
 _sym_db.RegisterMessage(Permission)
 
 UserRetrieveRequest = _reflection.GeneratedProtocolMessageType('UserRetrieveRequest', (_message.Message,), {
   'DESCRIPTOR' : _USERRETRIEVEREQUEST,
   '__module__' : 'weni.protobuf.flows.user_pb2'
-  # @@protoc_insertion_point(class_scope:weni.rapidpro.user.UserRetrieveRequest)
+  # @@protoc_insertion_point(class_scope:weni.flows.user.UserRetrieveRequest)
   })
 _sym_db.RegisterMessage(UserRetrieveRequest)
 
 UpdateUserLang = _reflection.GeneratedProtocolMessageType('UpdateUserLang', (_message.Message,), {
   'DESCRIPTOR' : _UPDATEUSERLANG,
   '__module__' : 'weni.protobuf.flows.user_pb2'
-  # @@protoc_insertion_point(class_scope:weni.rapidpro.user.UpdateUserLang)
+  # @@protoc_insertion_point(class_scope:weni.flows.user.UpdateUserLang)
   })
 _sym_db.RegisterMessage(UpdateUserLang)
 
 User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), {
   'DESCRIPTOR' : _USER,
   '__module__' : 'weni.protobuf.flows.user_pb2'
-  # @@protoc_insertion_point(class_scope:weni.rapidpro.user.User)
+  # @@protoc_insertion_point(class_scope:weni.flows.user.User)
   })
 _sym_db.RegisterMessage(User)
 
@@ -368,17 +368,17 @@ _sym_db.RegisterMessage(User)
 
 _USERPERMISSIONCONTROLLER = _descriptor.ServiceDescriptor(
   name='UserPermissionController',
-  full_name='weni.rapidpro.user.UserPermissionController',
+  full_name='weni.flows.user.UserPermissionController',
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=546,
-  serialized_end=855,
+  serialized_start=543,
+  serialized_end=834,
   methods=[
   _descriptor.MethodDescriptor(
     name='Retrieve',
-    full_name='weni.rapidpro.user.UserPermissionController.Retrieve',
+    full_name='weni.flows.user.UserPermissionController.Retrieve',
     index=0,
     containing_service=None,
     input_type=_USERPERMISSIONRETRIEVEREQUEST,
@@ -388,7 +388,7 @@ _USERPERMISSIONCONTROLLER = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Update',
-    full_name='weni.rapidpro.user.UserPermissionController.Update',
+    full_name='weni.flows.user.UserPermissionController.Update',
     index=1,
     containing_service=None,
     input_type=_USERPERMISSIONUPDATEREQUEST,
@@ -398,7 +398,7 @@ _USERPERMISSIONCONTROLLER = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Remove',
-    full_name='weni.rapidpro.user.UserPermissionController.Remove',
+    full_name='weni.flows.user.UserPermissionController.Remove',
     index=2,
     containing_service=None,
     input_type=_USERPERMISSIONUPDATEREQUEST,
@@ -414,17 +414,17 @@ DESCRIPTOR.services_by_name['UserPermissionController'] = _USERPERMISSIONCONTROL
 
 _USERCONTROLLER = _descriptor.ServiceDescriptor(
   name='UserController',
-  full_name='weni.rapidpro.user.UserController',
+  full_name='weni.flows.user.UserController',
   file=DESCRIPTOR,
   index=1,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=858,
-  serialized_end=1029,
+  serialized_start=837,
+  serialized_end=996,
   methods=[
   _descriptor.MethodDescriptor(
     name='Retrieve',
-    full_name='weni.rapidpro.user.UserController.Retrieve',
+    full_name='weni.flows.user.UserController.Retrieve',
     index=0,
     containing_service=None,
     input_type=_USERRETRIEVEREQUEST,
@@ -434,7 +434,7 @@ _USERCONTROLLER = _descriptor.ServiceDescriptor(
   ),
   _descriptor.MethodDescriptor(
     name='Update',
-    full_name='weni.rapidpro.user.UserController.Update',
+    full_name='weni.flows.user.UserController.Update',
     index=1,
     containing_service=None,
     input_type=_UPDATEUSERLANG,

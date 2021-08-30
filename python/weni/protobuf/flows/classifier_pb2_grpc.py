@@ -16,22 +16,22 @@ class ClassifierControllerStub(object):
             channel: A grpc.Channel.
         """
         self.Create = channel.unary_unary(
-                '/weni.rapidpro.classifier.ClassifierController/Create',
+                '/weni.flows.classifier.ClassifierController/Create',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_classifier__pb2.ClassifierCreateRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_classifier__pb2.Classifier.FromString,
                 )
         self.Retrieve = channel.unary_unary(
-                '/weni.rapidpro.classifier.ClassifierController/Retrieve',
+                '/weni.flows.classifier.ClassifierController/Retrieve',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_classifier__pb2.ClassifierRetrieveRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_classifier__pb2.Classifier.FromString,
                 )
         self.Destroy = channel.unary_unary(
-                '/weni.rapidpro.classifier.ClassifierController/Destroy',
+                '/weni.flows.classifier.ClassifierController/Destroy',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_classifier__pb2.ClassifierDestroyRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
         self.List = channel.unary_stream(
-                '/weni.rapidpro.classifier.ClassifierController/List',
+                '/weni.flows.classifier.ClassifierController/List',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_classifier__pb2.ClassifierListRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_classifier__pb2.Classifier.FromString,
                 )
@@ -89,7 +89,7 @@ def add_ClassifierControllerServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'weni.rapidpro.classifier.ClassifierController', rpc_method_handlers)
+            'weni.flows.classifier.ClassifierController', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -108,7 +108,7 @@ class ClassifierController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.rapidpro.classifier.ClassifierController/Create',
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.classifier.ClassifierController/Create',
             weni_dot_protobuf_dot_flows_dot_classifier__pb2.ClassifierCreateRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_classifier__pb2.Classifier.FromString,
             options, channel_credentials,
@@ -125,7 +125,7 @@ class ClassifierController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.rapidpro.classifier.ClassifierController/Retrieve',
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.classifier.ClassifierController/Retrieve',
             weni_dot_protobuf_dot_flows_dot_classifier__pb2.ClassifierRetrieveRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_classifier__pb2.Classifier.FromString,
             options, channel_credentials,
@@ -142,7 +142,7 @@ class ClassifierController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.rapidpro.classifier.ClassifierController/Destroy',
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.classifier.ClassifierController/Destroy',
             weni_dot_protobuf_dot_flows_dot_classifier__pb2.ClassifierDestroyRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
@@ -159,7 +159,7 @@ class ClassifierController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/weni.rapidpro.classifier.ClassifierController/List',
+        return grpc.experimental.unary_stream(request, target, '/weni.flows.classifier.ClassifierController/List',
             weni_dot_protobuf_dot_flows_dot_classifier__pb2.ClassifierListRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_classifier__pb2.Classifier.FromString,
             options, channel_credentials,

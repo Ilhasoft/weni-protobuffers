@@ -16,27 +16,27 @@ class OrgControllerStub(object):
             channel: A grpc.Channel.
         """
         self.List = channel.unary_stream(
-                '/weni.rapidpro.org.OrgController/List',
+                '/weni.flows.org.OrgController/List',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_org__pb2.OrgListRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_org__pb2.Org.FromString,
                 )
         self.Create = channel.unary_unary(
-                '/weni.rapidpro.org.OrgController/Create',
+                '/weni.flows.org.OrgController/Create',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_org__pb2.OrgCreateRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_org__pb2.Org.FromString,
                 )
         self.Retrieve = channel.unary_unary(
-                '/weni.rapidpro.org.OrgController/Retrieve',
+                '/weni.flows.org.OrgController/Retrieve',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_org__pb2.OrgRetrieveRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_org__pb2.Org.FromString,
                 )
         self.Update = channel.unary_unary(
-                '/weni.rapidpro.org.OrgController/Update',
+                '/weni.flows.org.OrgController/Update',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_org__pb2.OrgUpdateRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_flows_dot_org__pb2.OrgUpdateRequest.FromString,
+                response_deserializer=weni_dot_protobuf_dot_flows_dot_org__pb2.Org.FromString,
                 )
         self.Destroy = channel.unary_unary(
-                '/weni.rapidpro.org.OrgController/Destroy',
+                '/weni.flows.org.OrgController/Destroy',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_org__pb2.OrgDestroyRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
@@ -96,7 +96,7 @@ def add_OrgControllerServicer_to_server(servicer, server):
             'Update': grpc.unary_unary_rpc_method_handler(
                     servicer.Update,
                     request_deserializer=weni_dot_protobuf_dot_flows_dot_org__pb2.OrgUpdateRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_flows_dot_org__pb2.OrgUpdateRequest.SerializeToString,
+                    response_serializer=weni_dot_protobuf_dot_flows_dot_org__pb2.Org.SerializeToString,
             ),
             'Destroy': grpc.unary_unary_rpc_method_handler(
                     servicer.Destroy,
@@ -105,7 +105,7 @@ def add_OrgControllerServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'weni.rapidpro.org.OrgController', rpc_method_handlers)
+            'weni.flows.org.OrgController', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -124,7 +124,7 @@ class OrgController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/weni.rapidpro.org.OrgController/List',
+        return grpc.experimental.unary_stream(request, target, '/weni.flows.org.OrgController/List',
             weni_dot_protobuf_dot_flows_dot_org__pb2.OrgListRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_org__pb2.Org.FromString,
             options, channel_credentials,
@@ -141,7 +141,7 @@ class OrgController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.rapidpro.org.OrgController/Create',
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.org.OrgController/Create',
             weni_dot_protobuf_dot_flows_dot_org__pb2.OrgCreateRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_org__pb2.Org.FromString,
             options, channel_credentials,
@@ -158,7 +158,7 @@ class OrgController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.rapidpro.org.OrgController/Retrieve',
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.org.OrgController/Retrieve',
             weni_dot_protobuf_dot_flows_dot_org__pb2.OrgRetrieveRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_org__pb2.Org.FromString,
             options, channel_credentials,
@@ -175,9 +175,9 @@ class OrgController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.rapidpro.org.OrgController/Update',
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.org.OrgController/Update',
             weni_dot_protobuf_dot_flows_dot_org__pb2.OrgUpdateRequest.SerializeToString,
-            weni_dot_protobuf_dot_flows_dot_org__pb2.OrgUpdateRequest.FromString,
+            weni_dot_protobuf_dot_flows_dot_org__pb2.Org.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -192,7 +192,7 @@ class OrgController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.rapidpro.org.OrgController/Destroy',
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.org.OrgController/Destroy',
             weni_dot_protobuf_dot_flows_dot_org__pb2.OrgDestroyRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
