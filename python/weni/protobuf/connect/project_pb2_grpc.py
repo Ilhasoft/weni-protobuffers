@@ -2,8 +2,8 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from connect import project_pb2 as connect_dot_project__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
+from weni.protobuf.connect import project_pb2 as weni_dot_protobuf_dot_connect_dot_project__pb2
 
 
 class ProjectControllerStub(object):
@@ -17,22 +17,22 @@ class ProjectControllerStub(object):
         """
         self.Classifier = channel.unary_stream(
                 '/weni.connect.project.ProjectController/Classifier',
-                request_serializer=connect_dot_project__pb2.ClassifierListRequest.SerializeToString,
-                response_deserializer=connect_dot_project__pb2.ClassifierResponse.FromString,
+                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierListRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.FromString,
                 )
         self.CreateClassifier = channel.unary_unary(
                 '/weni.connect.project.ProjectController/CreateClassifier',
-                request_serializer=connect_dot_project__pb2.ClassifierCreateRequest.SerializeToString,
-                response_deserializer=connect_dot_project__pb2.ClassifierResponse.FromString,
+                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierCreateRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.FromString,
                 )
         self.RetrieveClassifier = channel.unary_unary(
                 '/weni.connect.project.ProjectController/RetrieveClassifier',
-                request_serializer=connect_dot_project__pb2.ClassifierRetrieveRequest.SerializeToString,
-                response_deserializer=connect_dot_project__pb2.ClassifierResponse.FromString,
+                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierRetrieveRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.FromString,
                 )
         self.DestroyClassifier = channel.unary_unary(
                 '/weni.connect.project.ProjectController/DestroyClassifier',
-                request_serializer=connect_dot_project__pb2.ClassifierDestroyRequest.SerializeToString,
+                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
 
@@ -69,22 +69,22 @@ def add_ProjectControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Classifier': grpc.unary_stream_rpc_method_handler(
                     servicer.Classifier,
-                    request_deserializer=connect_dot_project__pb2.ClassifierListRequest.FromString,
-                    response_serializer=connect_dot_project__pb2.ClassifierResponse.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierListRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.SerializeToString,
             ),
             'CreateClassifier': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateClassifier,
-                    request_deserializer=connect_dot_project__pb2.ClassifierCreateRequest.FromString,
-                    response_serializer=connect_dot_project__pb2.ClassifierResponse.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierCreateRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.SerializeToString,
             ),
             'RetrieveClassifier': grpc.unary_unary_rpc_method_handler(
                     servicer.RetrieveClassifier,
-                    request_deserializer=connect_dot_project__pb2.ClassifierRetrieveRequest.FromString,
-                    response_serializer=connect_dot_project__pb2.ClassifierResponse.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierRetrieveRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.SerializeToString,
             ),
             'DestroyClassifier': grpc.unary_unary_rpc_method_handler(
                     servicer.DestroyClassifier,
-                    request_deserializer=connect_dot_project__pb2.ClassifierDestroyRequest.FromString,
+                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
     }
@@ -109,8 +109,8 @@ class ProjectController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_stream(request, target, '/weni.connect.project.ProjectController/Classifier',
-            connect_dot_project__pb2.ClassifierListRequest.SerializeToString,
-            connect_dot_project__pb2.ClassifierResponse.FromString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierListRequest.SerializeToString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -126,8 +126,8 @@ class ProjectController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/CreateClassifier',
-            connect_dot_project__pb2.ClassifierCreateRequest.SerializeToString,
-            connect_dot_project__pb2.ClassifierResponse.FromString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierCreateRequest.SerializeToString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -143,8 +143,8 @@ class ProjectController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/RetrieveClassifier',
-            connect_dot_project__pb2.ClassifierRetrieveRequest.SerializeToString,
-            connect_dot_project__pb2.ClassifierResponse.FromString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierRetrieveRequest.SerializeToString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -160,7 +160,7 @@ class ProjectController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/DestroyClassifier',
-            connect_dot_project__pb2.ClassifierDestroyRequest.SerializeToString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
