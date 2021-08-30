@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package weni.rapidpro.org;
+package weni.flows.org;
 
 import "google/protobuf/empty.proto";
 
