@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from flow import statistic_pb2 as flow_dot_statistic__pb2
+from weni.protobuf.flows import statistic_pb2 as weni_dot_protobuf_dot_flows_dot_statistic__pb2
 
 
 class OrgStatisticControllerStub(object):
@@ -16,8 +16,8 @@ class OrgStatisticControllerStub(object):
         """
         self.Retrieve = channel.unary_unary(
                 '/weni.rapidpro.statistic.OrgStatisticController/Retrieve',
-                request_serializer=flow_dot_statistic__pb2.OrgStatisticRetrieveRequest.SerializeToString,
-                response_deserializer=flow_dot_statistic__pb2.OrgStatistic.FromString,
+                request_serializer=weni_dot_protobuf_dot_flows_dot_statistic__pb2.OrgStatisticRetrieveRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_flows_dot_statistic__pb2.OrgStatistic.FromString,
                 )
 
 
@@ -35,8 +35,8 @@ def add_OrgStatisticControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Retrieve': grpc.unary_unary_rpc_method_handler(
                     servicer.Retrieve,
-                    request_deserializer=flow_dot_statistic__pb2.OrgStatisticRetrieveRequest.FromString,
-                    response_serializer=flow_dot_statistic__pb2.OrgStatistic.SerializeToString,
+                    request_deserializer=weni_dot_protobuf_dot_flows_dot_statistic__pb2.OrgStatisticRetrieveRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_flows_dot_statistic__pb2.OrgStatistic.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -60,7 +60,7 @@ class OrgStatisticController(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.rapidpro.statistic.OrgStatisticController/Retrieve',
-            flow_dot_statistic__pb2.OrgStatisticRetrieveRequest.SerializeToString,
-            flow_dot_statistic__pb2.OrgStatistic.FromString,
+            weni_dot_protobuf_dot_flows_dot_statistic__pb2.OrgStatisticRetrieveRequest.SerializeToString,
+            weni_dot_protobuf_dot_flows_dot_statistic__pb2.OrgStatistic.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
