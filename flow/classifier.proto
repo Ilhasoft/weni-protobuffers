@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package weni.flows.classifier;
+package weni.rapidpro.classifier;
 
 import "google/protobuf/empty.proto";
 
