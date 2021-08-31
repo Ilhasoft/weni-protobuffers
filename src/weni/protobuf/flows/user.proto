@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package weni.rapidpro.user;
+package weni.flows.user;
 
 service UserPermissionController {
     rpc Retrieve(UserPermissionRetrieveRequest) returns (Permission) {}

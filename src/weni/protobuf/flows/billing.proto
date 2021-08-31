@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package weni.rapidpro.billing;
+package weni.flows.billing;
 
 import "google/protobuf/timestamp.proto";
 
