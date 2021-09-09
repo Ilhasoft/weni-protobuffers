@@ -7,6 +7,7 @@ import "google/protobuf/empty.proto";
 service ProjectController {
     rpc Classifier(ClassifierListRequest) returns (stream ClassifierResponse) {}
     rpc CreateClassifier(ClassifierCreateRequest) returns (ClassifierResponse) {}
+    rpc CreateChannel(CreateChannelRequest) returns (CreateChannelResponse) {}
     rpc RetrieveClassifier(ClassifierRetrieveRequest) returns (ClassifierResponse) {}
     rpc DestroyClassifier(ClassifierDestroyRequest) returns (google.protobuf.Empty) {}
 }
@@ -38,4 +39,14 @@ message ClassifierRetrieveRequest {
 message ClassifierDestroyRequest {
     string uuid = 1;
     string user_email = 2;
+}
+
+message CreateChannelRequest {
+    string name = 1;
+    string user = 2;
+    string base_url = 3;
+}
+
+message CreateChannelResponse {
+    string name = 1;
 }
