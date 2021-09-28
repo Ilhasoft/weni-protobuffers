@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package weni.integrations.user;
+
+service UserPermissionController {
+    rpc Update(UserPermissionUpdateRequest) returns (Permission) {}
+}
+
+message UserPermissionUpdateRequest {
+    string project_uuid = 1;
+    string user = 2;
+    int32 role = 3;
+}
+
+message Permission {
+    string project_uuid = 1;
+    string user = 2;
+    int32 role = 3;
+}
