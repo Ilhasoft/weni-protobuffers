@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n%weni/protobuf/integrations/user.proto\x12\x16weni.integrations.user\"O\n\x1bUserPermissionUpdateRequest\x12\x14\n\x0cproject_uuid\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x0c\n\x04role\x18\x03 \x01(\x05\">\n\nPermission\x12\x14\n\x0cproject_uuid\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x0c\n\x04role\x18\x03 \x01(\x05\x32\x7f\n\x18UserPermissionController\x12\x63\n\x06Update\x12\x33.weni.integrations.user.UserPermissionUpdateRequest\x1a\".weni.integrations.user.Permission\"\x00\x62\x06proto3'
+  serialized_pb=b'\n%weni/protobuf/integrations/user.proto\x12\x16weni.integrations.user\"O\n\x1bUserPermissionUpdateRequest\x12\x14\n\x0cproject_uuid\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x0c\n\x04role\x18\x03 \x01(\x05\">\n\nPermission\x12\x14\n\x0cproject_uuid\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x0c\n\x04role\x18\x03 \x01(\x05\"\x95\x01\n\x11UserUpdateRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x16\n\tphoto_url\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x17\n\nfirst_name\x18\x03 \x01(\tH\x01\x88\x01\x01\x12\x16\n\tlast_name\x18\x04 \x01(\tH\x02\x88\x01\x01\x42\x0c\n\n_photo_urlB\r\n\x0b_first_nameB\x0c\n\n_last_name\"N\n\x04User\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x11\n\tphoto_url\x18\x02 \x01(\t\x12\x12\n\nfirst_name\x18\x03 \x01(\t\x12\x11\n\tlast_name\x18\x04 \x01(\t2\x7f\n\x18UserPermissionController\x12\x63\n\x06Update\x12\x33.weni.integrations.user.UserPermissionUpdateRequest\x1a\".weni.integrations.user.Permission\"\x00\x32\x65\n\x0eUserController\x12S\n\x06Update\x12).weni.integrations.user.UserUpdateRequest\x1a\x1c.weni.integrations.user.User\"\x00\x62\x06proto3'
 )
 
 
@@ -116,8 +116,140 @@ _PERMISSION = _descriptor.Descriptor(
   serialized_end=208,
 )
 
+
+_USERUPDATEREQUEST = _descriptor.Descriptor(
+  name='UserUpdateRequest',
+  full_name='weni.integrations.user.UserUpdateRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user', full_name='weni.integrations.user.UserUpdateRequest.user', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='photo_url', full_name='weni.integrations.user.UserUpdateRequest.photo_url', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='first_name', full_name='weni.integrations.user.UserUpdateRequest.first_name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='last_name', full_name='weni.integrations.user.UserUpdateRequest.last_name', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+    _descriptor.OneofDescriptor(
+      name='_photo_url', full_name='weni.integrations.user.UserUpdateRequest._photo_url',
+      index=0, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+    _descriptor.OneofDescriptor(
+      name='_first_name', full_name='weni.integrations.user.UserUpdateRequest._first_name',
+      index=1, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+    _descriptor.OneofDescriptor(
+      name='_last_name', full_name='weni.integrations.user.UserUpdateRequest._last_name',
+      index=2, containing_type=None,
+      create_key=_descriptor._internal_create_key,
+    fields=[]),
+  ],
+  serialized_start=211,
+  serialized_end=360,
+)
+
+
+_USER = _descriptor.Descriptor(
+  name='User',
+  full_name='weni.integrations.user.User',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='user', full_name='weni.integrations.user.User.user', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='photo_url', full_name='weni.integrations.user.User.photo_url', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='first_name', full_name='weni.integrations.user.User.first_name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='last_name', full_name='weni.integrations.user.User.last_name', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=362,
+  serialized_end=440,
+)
+
+_USERUPDATEREQUEST.oneofs_by_name['_photo_url'].fields.append(
+  _USERUPDATEREQUEST.fields_by_name['photo_url'])
+_USERUPDATEREQUEST.fields_by_name['photo_url'].containing_oneof = _USERUPDATEREQUEST.oneofs_by_name['_photo_url']
+_USERUPDATEREQUEST.oneofs_by_name['_first_name'].fields.append(
+  _USERUPDATEREQUEST.fields_by_name['first_name'])
+_USERUPDATEREQUEST.fields_by_name['first_name'].containing_oneof = _USERUPDATEREQUEST.oneofs_by_name['_first_name']
+_USERUPDATEREQUEST.oneofs_by_name['_last_name'].fields.append(
+  _USERUPDATEREQUEST.fields_by_name['last_name'])
+_USERUPDATEREQUEST.fields_by_name['last_name'].containing_oneof = _USERUPDATEREQUEST.oneofs_by_name['_last_name']
 DESCRIPTOR.message_types_by_name['UserPermissionUpdateRequest'] = _USERPERMISSIONUPDATEREQUEST
 DESCRIPTOR.message_types_by_name['Permission'] = _PERMISSION
+DESCRIPTOR.message_types_by_name['UserUpdateRequest'] = _USERUPDATEREQUEST
+DESCRIPTOR.message_types_by_name['User'] = _USER
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 UserPermissionUpdateRequest = _reflection.GeneratedProtocolMessageType('UserPermissionUpdateRequest', (_message.Message,), {
@@ -134,6 +266,20 @@ Permission = _reflection.GeneratedProtocolMessageType('Permission', (_message.Me
   })
 _sym_db.RegisterMessage(Permission)
 
+UserUpdateRequest = _reflection.GeneratedProtocolMessageType('UserUpdateRequest', (_message.Message,), {
+  'DESCRIPTOR' : _USERUPDATEREQUEST,
+  '__module__' : 'weni.protobuf.integrations.user_pb2'
+  # @@protoc_insertion_point(class_scope:weni.integrations.user.UserUpdateRequest)
+  })
+_sym_db.RegisterMessage(UserUpdateRequest)
+
+User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), {
+  'DESCRIPTOR' : _USER,
+  '__module__' : 'weni.protobuf.integrations.user_pb2'
+  # @@protoc_insertion_point(class_scope:weni.integrations.user.User)
+  })
+_sym_db.RegisterMessage(User)
+
 
 
 _USERPERMISSIONCONTROLLER = _descriptor.ServiceDescriptor(
@@ -143,8 +289,8 @@ _USERPERMISSIONCONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=210,
-  serialized_end=337,
+  serialized_start=442,
+  serialized_end=569,
   methods=[
   _descriptor.MethodDescriptor(
     name='Update',
@@ -160,5 +306,31 @@ _USERPERMISSIONCONTROLLER = _descriptor.ServiceDescriptor(
 _sym_db.RegisterServiceDescriptor(_USERPERMISSIONCONTROLLER)
 
 DESCRIPTOR.services_by_name['UserPermissionController'] = _USERPERMISSIONCONTROLLER
+
+
+_USERCONTROLLER = _descriptor.ServiceDescriptor(
+  name='UserController',
+  full_name='weni.integrations.user.UserController',
+  file=DESCRIPTOR,
+  index=1,
+  serialized_options=None,
+  create_key=_descriptor._internal_create_key,
+  serialized_start=571,
+  serialized_end=672,
+  methods=[
+  _descriptor.MethodDescriptor(
+    name='Update',
+    full_name='weni.integrations.user.UserController.Update',
+    index=0,
+    containing_service=None,
+    input_type=_USERUPDATEREQUEST,
+    output_type=_USER,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+])
+_sym_db.RegisterServiceDescriptor(_USERCONTROLLER)
+
+DESCRIPTOR.services_by_name['UserController'] = _USERCONTROLLER
 
 # @@protoc_insertion_point(module_scope)
