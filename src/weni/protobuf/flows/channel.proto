@@ -13,6 +13,6 @@ message WeniWebChatCreateRequest {
 }
 
 message WeniWebChat {
-    string name = 1;
+    string uuid = 1;
 }
 
