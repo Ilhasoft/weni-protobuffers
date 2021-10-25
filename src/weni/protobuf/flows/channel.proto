@@ -10,6 +10,7 @@ message WeniWebChatCreateRequest {
     string name = 1;
     string user = 2;
     string base_url = 3;
+    string org = 4;
 }
 
 message WeniWebChat {

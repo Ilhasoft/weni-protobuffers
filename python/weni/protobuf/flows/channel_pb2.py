@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!weni/protobuf/flows/channel.proto\x12\x12weni.flows.channel\"H\n\x18WeniWebChatCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x10\n\x08\x62\x61se_url\x18\x03 \x01(\t\"\x1b\n\x0bWeniWebChat\x12\x0c\n\x04uuid\x18\x01 \x01(\t2r\n\x15WeniWebChatController\x12Y\n\x06\x43reate\x12,.weni.flows.channel.WeniWebChatCreateRequest\x1a\x1f.weni.flows.channel.WeniWebChat\"\x00\x62\x06proto3'
+  serialized_pb=b'\n!weni/protobuf/flows/channel.proto\x12\x12weni.flows.channel\"U\n\x18WeniWebChatCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x10\n\x08\x62\x61se_url\x18\x03 \x01(\t\x12\x0b\n\x03org\x18\x04 \x01(\t\"\x1b\n\x0bWeniWebChat\x12\x0c\n\x04uuid\x18\x01 \x01(\t2r\n\x15WeniWebChatController\x12Y\n\x06\x43reate\x12,.weni.flows.channel.WeniWebChatCreateRequest\x1a\x1f.weni.flows.channel.WeniWebChat\"\x00\x62\x06proto3'
 )
 
 
@@ -54,6 +54,13 @@ _WENIWEBCHATCREATEREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='org', full_name='weni.flows.channel.WeniWebChatCreateRequest.org', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -67,7 +74,7 @@ _WENIWEBCHATCREATEREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=57,
-  serialized_end=129,
+  serialized_end=142,
 )
 
 
@@ -98,8 +105,8 @@ _WENIWEBCHAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=131,
-  serialized_end=158,
+  serialized_start=144,
+  serialized_end=171,
 )
 
 DESCRIPTOR.message_types_by_name['WeniWebChatCreateRequest'] = _WENIWEBCHATCREATEREQUEST
@@ -129,8 +136,8 @@ _WENIWEBCHATCONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=160,
-  serialized_end=274,
+  serialized_start=173,
+  serialized_end=287,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
