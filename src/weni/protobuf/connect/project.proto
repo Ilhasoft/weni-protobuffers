@@ -45,6 +45,7 @@ message CreateChannelRequest {
     string name = 1;
     string user = 2;
     string base_url = 3;
+    string project_uuid = 4;
 }
 
 message CreateChannelResponse {
