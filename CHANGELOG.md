@@ -1,6 +1,15 @@
 ## [Unreleased]
+
+## [1.2.1] - 2021-10-28
+### Added
+- channel release endpoint (#42)
+
+## [1.2.0] - 2021-10-26
+### Added
+- project_uuid to CreateChannelRequest on connect (#40)
+
 ### Fixed
-- Add org to message WeniWebChatCreateRequest
+- Add org to message WeniWebChatCreateRequest (#39)
 
 ## [1.1.1] - 2021-10-18
 ### Fixed
