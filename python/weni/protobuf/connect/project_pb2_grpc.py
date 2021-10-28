@@ -40,6 +40,11 @@ class ProjectControllerStub(object):
                 request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
+        self.ReleaseChannel = channel.unary_unary(
+                '/weni.connect.project.ProjectController/ReleaseChannel',
+                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ReleaseChannelRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
 
 
 class ProjectControllerServicer(object):
@@ -75,6 +80,12 @@ class ProjectControllerServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ReleaseChannel(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ProjectControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -101,6 +112,11 @@ def add_ProjectControllerServicer_to_server(servicer, server):
             'DestroyClassifier': grpc.unary_unary_rpc_method_handler(
                     servicer.DestroyClassifier,
                     request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'ReleaseChannel': grpc.unary_unary_rpc_method_handler(
+                    servicer.ReleaseChannel,
+                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ReleaseChannelRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
     }
@@ -194,6 +210,23 @@ class ProjectController(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/DestroyClassifier',
             weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ReleaseChannel(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/ReleaseChannel',
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ReleaseChannelRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

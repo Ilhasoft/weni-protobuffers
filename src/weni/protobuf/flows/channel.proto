@@ -2,8 +2,19 @@ syntax = "proto3";
 
 package weni.flows.channel;
 
+import "google/protobuf/empty.proto";
+
+service ChannelController {
+    rpc Destroy(ChannelDestroyRequest) returns (google.protobuf.Empty) {}
+}
+
 service WeniWebChatController {
     rpc Create(WeniWebChatCreateRequest) returns (WeniWebChat) {}
+}
+
+message ChannelDestroyRequest {
+    string user = 1;
+    string uuid = 2;
 }
 
 message WeniWebChatCreateRequest {
