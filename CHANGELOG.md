@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.2.2] - 2021-11-11
+### Added
+- Generic endpoint to create channels by channeltype_code
+
 ## [1.2.1] - 2021-10-28
 ### Added
 - channel release endpoint (#42)
