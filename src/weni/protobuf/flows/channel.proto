@@ -5,11 +5,23 @@ package weni.flows.channel;
 import "google/protobuf/empty.proto";
 
 service ChannelController {
+    rpc Create (ChannelCreateRequest) returns (Channel);
     rpc Destroy(ChannelDestroyRequest) returns (google.protobuf.Empty) {}
 }
 
 service WeniWebChatController {
     rpc Create(WeniWebChatCreateRequest) returns (WeniWebChat) {}
+}
+
+message ChannelCreateRequest {
+    string user = 1;
+    string org = 2;
+    string data = 3;
+    string channeltype_code = 4;
+}
+
+message Channel {
+    string uuid = 1;
 }
 
 message ChannelDestroyRequest {

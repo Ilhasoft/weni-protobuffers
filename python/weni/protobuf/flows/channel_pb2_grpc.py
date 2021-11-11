@@ -15,6 +15,11 @@ class ChannelControllerStub(object):
         Args:
             channel: A grpc.Channel.
         """
+        self.Create = channel.unary_unary(
+                '/weni.flows.channel.ChannelController/Create',
+                request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
+                )
         self.Destroy = channel.unary_unary(
                 '/weni.flows.channel.ChannelController/Destroy',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelDestroyRequest.SerializeToString,
@@ -25,6 +30,12 @@ class ChannelControllerStub(object):
 class ChannelControllerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
+    def Create(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def Destroy(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -34,6 +45,11 @@ class ChannelControllerServicer(object):
 
 def add_ChannelControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
+            'Create': grpc.unary_unary_rpc_method_handler(
+                    servicer.Create,
+                    request_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.SerializeToString,
+            ),
             'Destroy': grpc.unary_unary_rpc_method_handler(
                     servicer.Destroy,
                     request_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelDestroyRequest.FromString,
@@ -48,6 +64,23 @@ def add_ChannelControllerServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class ChannelController(object):
     """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def Create(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.channel.ChannelController/Create',
+            weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.SerializeToString,
+            weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Destroy(request,
