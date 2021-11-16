@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.2.3] - 2021-11-16
+### Added
+- Generic endpoint to create channels on connect
+
 ## [1.2.2] - 2021-11-11
 ### Added
 - Generic endpoint to create channels by channeltype_code
