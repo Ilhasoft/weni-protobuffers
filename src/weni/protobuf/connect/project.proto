@@ -43,10 +43,10 @@ message ClassifierDestroyRequest {
 }
 
 message CreateChannelRequest {
-    string name = 1;
-    string user = 2;
-    string base_url = 3;
-    string project_uuid = 4;
+    string user = 1;
+    string project_uuid = 2;
+    string data = 3;
+    string channeltype_code = 4;
 }
 
 message CreateChannelResponse {
