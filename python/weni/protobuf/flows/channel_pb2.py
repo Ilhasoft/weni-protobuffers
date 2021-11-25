@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!weni/protobuf/flows/channel.proto\x12\x12weni.flows.channel\x1a\x1bgoogle/protobuf/empty.proto\"Y\n\x14\x43hannelCreateRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0b\n\x03org\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\x12\x18\n\x10\x63hanneltype_code\x18\x04 \x01(\t\"\x17\n\x07\x43hannel\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"3\n\x15\x43hannelDestroyRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0c\n\x04uuid\x18\x02 \x01(\t\"U\n\x18WeniWebChatCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x10\n\x08\x62\x61se_url\x18\x03 \x01(\t\x12\x0b\n\x03org\x18\x04 \x01(\t\"\x1b\n\x0bWeniWebChat\x12\x0c\n\x04uuid\x18\x01 \x01(\t2\xb4\x01\n\x11\x43hannelController\x12O\n\x06\x43reate\x12(.weni.flows.channel.ChannelCreateRequest\x1a\x1b.weni.flows.channel.Channel\x12N\n\x07\x44\x65stroy\x12).weni.flows.channel.ChannelDestroyRequest\x1a\x16.google.protobuf.Empty\"\x00\x32r\n\x15WeniWebChatController\x12Y\n\x06\x43reate\x12,.weni.flows.channel.WeniWebChatCreateRequest\x1a\x1f.weni.flows.channel.WeniWebChat\"\x00\x62\x06proto3'
+  serialized_pb=b'\n!weni/protobuf/flows/channel.proto\x12\x12weni.flows.channel\x1a\x1bgoogle/protobuf/empty.proto\"Y\n\x14\x43hannelCreateRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0b\n\x03org\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\x12\x18\n\x10\x63hanneltype_code\x18\x04 \x01(\t\"F\n\x07\x43hannel\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x63onfig\x18\x03 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\"3\n\x15\x43hannelDestroyRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0c\n\x04uuid\x18\x02 \x01(\t\"U\n\x18WeniWebChatCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x10\n\x08\x62\x61se_url\x18\x03 \x01(\t\x12\x0b\n\x03org\x18\x04 \x01(\t\"\x1b\n\x0bWeniWebChat\x12\x0c\n\x04uuid\x18\x01 \x01(\t2\xb4\x01\n\x11\x43hannelController\x12O\n\x06\x43reate\x12(.weni.flows.channel.ChannelCreateRequest\x1a\x1b.weni.flows.channel.Channel\x12N\n\x07\x44\x65stroy\x12).weni.flows.channel.ChannelDestroyRequest\x1a\x16.google.protobuf.Empty\"\x00\x32r\n\x15WeniWebChatController\x12Y\n\x06\x43reate\x12,.weni.flows.channel.WeniWebChatCreateRequest\x1a\x1f.weni.flows.channel.WeniWebChat\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -95,6 +95,27 @@ _CHANNEL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='weni.flows.channel.Channel.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='config', full_name='weni.flows.channel.Channel.config', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='weni.flows.channel.Channel.address', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -108,7 +129,7 @@ _CHANNEL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=177,
-  serialized_end=200,
+  serialized_end=247,
 )
 
 
@@ -146,8 +167,8 @@ _CHANNELDESTROYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=202,
-  serialized_end=253,
+  serialized_start=249,
+  serialized_end=300,
 )
 
 
@@ -199,8 +220,8 @@ _WENIWEBCHATCREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=255,
-  serialized_end=340,
+  serialized_start=302,
+  serialized_end=387,
 )
 
 
@@ -231,8 +252,8 @@ _WENIWEBCHAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=342,
-  serialized_end=369,
+  serialized_start=389,
+  serialized_end=416,
 )
 
 DESCRIPTOR.message_types_by_name['ChannelCreateRequest'] = _CHANNELCREATEREQUEST
@@ -286,8 +307,8 @@ _CHANNELCONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=372,
-  serialized_end=552,
+  serialized_start=419,
+  serialized_end=599,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
@@ -322,8 +343,8 @@ _WENIWEBCHATCONTROLLER = _descriptor.ServiceDescriptor(
   index=1,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=554,
-  serialized_end=668,
+  serialized_start=601,
+  serialized_end=715,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
