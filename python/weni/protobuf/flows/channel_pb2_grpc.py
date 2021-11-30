@@ -20,6 +20,16 @@ class ChannelControllerStub(object):
                 request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
                 )
+        self.Retrieve = channel.unary_unary(
+                '/weni.flows.channel.ChannelController/Retrieve',
+                request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelRetrieveRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
+                )
+        self.List = channel.unary_stream(
+                '/weni.flows.channel.ChannelController/List',
+                request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelListRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
+                )
         self.Destroy = channel.unary_unary(
                 '/weni.flows.channel.ChannelController/Destroy',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelDestroyRequest.SerializeToString,
@@ -31,6 +41,18 @@ class ChannelControllerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def Create(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def Retrieve(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def List(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -48,6 +70,16 @@ def add_ChannelControllerServicer_to_server(servicer, server):
             'Create': grpc.unary_unary_rpc_method_handler(
                     servicer.Create,
                     request_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.SerializeToString,
+            ),
+            'Retrieve': grpc.unary_unary_rpc_method_handler(
+                    servicer.Retrieve,
+                    request_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelRetrieveRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.SerializeToString,
+            ),
+            'List': grpc.unary_stream_rpc_method_handler(
+                    servicer.List,
+                    request_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelListRequest.FromString,
                     response_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.SerializeToString,
             ),
             'Destroy': grpc.unary_unary_rpc_method_handler(
@@ -78,6 +110,40 @@ class ChannelController(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.flows.channel.ChannelController/Create',
             weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.SerializeToString,
+            weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def Retrieve(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.channel.ChannelController/Retrieve',
+            weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelRetrieveRequest.SerializeToString,
+            weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def List(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/weni.flows.channel.ChannelController/List',
+            weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelListRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
