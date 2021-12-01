@@ -1,5 +1,10 @@
 ## [Unreleased]
 
+## [1.2.4] - 2021-12-01
+### Added
+- Add Retrieve and List endpoints to Channel service
+- Added new fields to channel generic endpoint
+
 ## [1.2.3] - 2021-11-16
 ### Added
 - Generic endpoint to create channels on connect
