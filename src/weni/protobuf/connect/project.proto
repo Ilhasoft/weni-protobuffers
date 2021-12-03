@@ -51,6 +51,9 @@ message CreateChannelRequest {
 
 message CreateChannelResponse {
     string uuid = 1;
+    string name = 2;
+    string config = 3;
+    string address = 4;
 }
 
 message ReleaseChannelRequest {
