@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.2.5] - 2021-12-07
+### Added
+- name, config, and address fields to CreateChannelResponse on connect
+
 ## [1.2.4] - 2021-12-01
 ### Added
 - Add Retrieve and List endpoints to Channel service
