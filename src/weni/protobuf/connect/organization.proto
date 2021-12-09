@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package organization;
+
+service OrganizationController {
+    rpc List(OrganizationListRequest) returns (stream OrganizationResponse) {}
+    rpc Retrieve(OrganizationRetrieveRequest) returns (OrganizationResponse) {}
+
+}
+
+message OrganizationResponse {
+    string uuid = 1;
+    string name = 2;
+    string description = 3;
+    int32 inteligence_organization = 4;
+    int32 extra_integration = 5;
+    bool is_suspended = 6;
+}
+
+message OrganizationListRequest {
+    string uuid = 1;
+}
+
+message OrganizationRetrieveRequest {
+    string uuid = 1;
+}
