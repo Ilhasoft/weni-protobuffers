@@ -15,12 +15,12 @@ class OrganizationControllerStub(object):
             channel: A grpc.Channel.
         """
         self.List = channel.unary_stream(
-                '/organization.OrganizationController/List',
+                '/weni.connect.project.OrganizationController/List',
                 request_serializer=weni_dot_protobuf_dot_connect_dot_organization__pb2.OrganizationListRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_connect_dot_organization__pb2.OrganizationResponse.FromString,
                 )
         self.Retrieve = channel.unary_unary(
-                '/organization.OrganizationController/Retrieve',
+                '/weni.connect.project.OrganizationController/Retrieve',
                 request_serializer=weni_dot_protobuf_dot_connect_dot_organization__pb2.OrganizationRetrieveRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_connect_dot_organization__pb2.OrganizationResponse.FromString,
                 )
@@ -56,7 +56,7 @@ def add_OrganizationControllerServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'organization.OrganizationController', rpc_method_handlers)
+            'weni.connect.project.OrganizationController', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -75,7 +75,7 @@ class OrganizationController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/organization.OrganizationController/List',
+        return grpc.experimental.unary_stream(request, target, '/weni.connect.project.OrganizationController/List',
             weni_dot_protobuf_dot_connect_dot_organization__pb2.OrganizationListRequest.SerializeToString,
             weni_dot_protobuf_dot_connect_dot_organization__pb2.OrganizationResponse.FromString,
             options, channel_credentials,
@@ -92,7 +92,7 @@ class OrganizationController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/organization.OrganizationController/Retrieve',
+        return grpc.experimental.unary_unary(request, target, '/weni.connect.project.OrganizationController/Retrieve',
             weni_dot_protobuf_dot_connect_dot_organization__pb2.OrganizationRetrieveRequest.SerializeToString,
             weni_dot_protobuf_dot_connect_dot_organization__pb2.OrganizationResponse.FromString,
             options, channel_credentials,

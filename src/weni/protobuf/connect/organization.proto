@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package organization;
+package weni.connect.project;
 
 service OrganizationController {
     rpc List(OrganizationListRequest) returns (stream OrganizationResponse) {}
