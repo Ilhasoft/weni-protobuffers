@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.2.6] - 2021-12-13
+### Added
+- Add retrieve organization endpoint (#53)
+
 ## [1.2.5] - 2021-12-07
 ### Added
 - name, config, and address fields to CreateChannelResponse on connect
