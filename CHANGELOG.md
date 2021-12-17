@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.2.7] - 2021-12-17
+### Added
+- Whatsapp router channel.proto
+
 ## [1.2.6] - 2021-12-13
 ### Added
 - Add retrieve organization endpoint (#53)
