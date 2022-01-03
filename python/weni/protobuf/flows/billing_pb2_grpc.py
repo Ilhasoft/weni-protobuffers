@@ -5,7 +5,7 @@ import grpc
 from weni.protobuf.flows import billing_pb2 as weni_dot_protobuf_dot_flows_dot_billing__pb2
 
 
-class BillingStub(object):
+class BillingControllerStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,18 +15,18 @@ class BillingStub(object):
             channel: A grpc.Channel.
         """
         self.Total = channel.unary_unary(
-                '/weni.flows.billing.Billing/Total',
+                '/weni.flows.billing.BillingController/Total',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingResponse.FromString,
+                response_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.TotalResponse.FromString,
                 )
         self.Detailed = channel.unary_stream(
-                '/weni.flows.billing.Billing/Detailed',
+                '/weni.flows.billing.BillingController/Detailed',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.ActiveContactDetail.FromString,
                 )
 
 
-class BillingServicer(object):
+class BillingControllerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def Total(self, request, context):
@@ -43,12 +43,12 @@ class BillingServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_BillingServicer_to_server(servicer, server):
+def add_BillingControllerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Total': grpc.unary_unary_rpc_method_handler(
                     servicer.Total,
                     request_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingResponse.SerializeToString,
+                    response_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.TotalResponse.SerializeToString,
             ),
             'Detailed': grpc.unary_stream_rpc_method_handler(
                     servicer.Detailed,
@@ -57,12 +57,12 @@ def add_BillingServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'weni.flows.billing.Billing', rpc_method_handlers)
+            'weni.flows.billing.BillingController', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class Billing(object):
+class BillingController(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -76,9 +76,9 @@ class Billing(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.flows.billing.Billing/Total',
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.billing.BillingController/Total',
             weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingRequest.SerializeToString,
-            weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingResponse.FromString,
+            weni_dot_protobuf_dot_flows_dot_billing__pb2.TotalResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -93,7 +93,7 @@ class Billing(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/weni.flows.billing.Billing/Detailed',
+        return grpc.experimental.unary_stream(request, target, '/weni.flows.billing.BillingController/Detailed',
             weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_billing__pb2.ActiveContactDetail.FromString,
             options, channel_credentials,
