@@ -4,19 +4,19 @@ package weni.flows.billing;
 
 import "google/protobuf/timestamp.proto";
 
-service Billing {
+service BillingController {
     // Get the total or active contacts in a time range
-    rpc Total(BillingRequest) returns (BillingResponse){}
+    rpc Total(BillingRequest) returns (TotalResponse){}
     rpc Detailed(BillingRequest) returns (stream ActiveContactDetail){}
 }
 
 message BillingRequest {
-    string org_uuid = 1;
+    string org = 1;
     string before = 2;
     string after = 3;
 }
 
-message BillingResponse {
+message TotalResponse {
     int32 active_contacts = 1;
 }
 
@@ -31,6 +31,7 @@ message Msg {
     google.protobuf.Timestamp sent_on = 3;
     Direction direction = 4;
 }
+
 message Channel {
     string uuid = 1;
     string name = 2;
