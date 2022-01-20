@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.2.8] - 2022-01-20
+### Refactored
+- Some billing endpoint nomenclatures
+
 ## [1.2.7] - 2021-12-17
 ### Added
 - Whatsapp router channel.proto
