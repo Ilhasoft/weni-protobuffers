@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package weni.academy.user;
+
+service UserController {
+    rpc Update(UpdateUserLang) returns (User) {}
+}
+
+message User {
+    int32 id = 1;
+    string email = 2;
+    string language = 3;
+    bool is_active = 4;
+}
+
+message UpdateUserLang {
+    string email = 1;
+    string language = 2;
+}
