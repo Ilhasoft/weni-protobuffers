@@ -1,4 +1,7 @@
 ## [Unreleased]
+## [1.2.9] - 2022-18-03
+### Added
+- Update user on weni academy
 
 ## [1.2.8] - 2022-01-20
 ### Refactored
