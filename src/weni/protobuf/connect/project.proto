@@ -7,9 +7,10 @@ import "google/protobuf/empty.proto";
 service ProjectController {
     rpc Classifier(ClassifierListRequest) returns (stream ClassifierResponse) {}
     rpc CreateClassifier(ClassifierCreateRequest) returns (ClassifierResponse) {}
-    rpc CreateChannel(CreateChannelRequest) returns (CreateChannelResponse) {}
     rpc RetrieveClassifier(ClassifierRetrieveRequest) returns (ClassifierResponse) {}
     rpc DestroyClassifier(ClassifierDestroyRequest) returns (google.protobuf.Empty) {}
+    rpc Channel(ChannelListRequest) returns (stream ChannelResponse) {}
+    rpc CreateChannel(CreateChannelRequest) returns (ChannelResponse) {}
     rpc ReleaseChannel(ReleaseChannelRequest) returns (google.protobuf.Empty) {}
 }
 
@@ -42,18 +43,22 @@ message ClassifierDestroyRequest {
     string user_email = 2;
 }
 
+message ChannelResponse {
+    string uuid = 1;
+    string name = 2;
+    string config = 3;
+    string address = 4;
+}
+
+message ChannelListRequest {
+    string channel_type = 1;
+}
+
 message CreateChannelRequest {
     string user = 1;
     string project_uuid = 2;
     string data = 3;
     string channeltype_code = 4;
-}
-
-message CreateChannelResponse {
-    string uuid = 1;
-    string name = 2;
-    string config = 3;
-    string address = 4;
 }
 
 message ReleaseChannelRequest {
