@@ -25,11 +25,6 @@ class ProjectControllerStub(object):
                 request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierCreateRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.FromString,
                 )
-        self.CreateChannel = channel.unary_unary(
-                '/weni.connect.project.ProjectController/CreateChannel',
-                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelResponse.FromString,
-                )
         self.RetrieveClassifier = channel.unary_unary(
                 '/weni.connect.project.ProjectController/RetrieveClassifier',
                 request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierRetrieveRequest.SerializeToString,
@@ -39,6 +34,16 @@ class ProjectControllerStub(object):
                 '/weni.connect.project.ProjectController/DestroyClassifier',
                 request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
+        self.Channel = channel.unary_stream(
+                '/weni.connect.project.ProjectController/Channel',
+                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.FromString,
+                )
+        self.CreateChannel = channel.unary_unary(
+                '/weni.connect.project.ProjectController/CreateChannel',
+                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.FromString,
                 )
         self.ReleaseChannel = channel.unary_unary(
                 '/weni.connect.project.ProjectController/ReleaseChannel',
@@ -62,12 +67,6 @@ class ProjectControllerServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def CreateChannel(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def RetrieveClassifier(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -75,6 +74,18 @@ class ProjectControllerServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def DestroyClassifier(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def Channel(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def CreateChannel(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -99,11 +110,6 @@ def add_ProjectControllerServicer_to_server(servicer, server):
                     request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierCreateRequest.FromString,
                     response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierResponse.SerializeToString,
             ),
-            'CreateChannel': grpc.unary_unary_rpc_method_handler(
-                    servicer.CreateChannel,
-                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelResponse.SerializeToString,
-            ),
             'RetrieveClassifier': grpc.unary_unary_rpc_method_handler(
                     servicer.RetrieveClassifier,
                     request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierRetrieveRequest.FromString,
@@ -113,6 +119,16 @@ def add_ProjectControllerServicer_to_server(servicer, server):
                     servicer.DestroyClassifier,
                     request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'Channel': grpc.unary_stream_rpc_method_handler(
+                    servicer.Channel,
+                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.SerializeToString,
+            ),
+            'CreateChannel': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateChannel,
+                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.SerializeToString,
             ),
             'ReleaseChannel': grpc.unary_unary_rpc_method_handler(
                     servicer.ReleaseChannel,
@@ -164,23 +180,6 @@ class ProjectController(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def CreateChannel(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/CreateChannel',
-            weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.SerializeToString,
-            weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
     def RetrieveClassifier(request,
             target,
             options=(),
@@ -211,6 +210,40 @@ class ProjectController(object):
         return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/DestroyClassifier',
             weni_dot_protobuf_dot_connect_dot_project__pb2.ClassifierDestroyRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def Channel(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/weni.connect.project.ProjectController/Channel',
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListRequest.SerializeToString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def CreateChannel(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/CreateChannel',
+            weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.SerializeToString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

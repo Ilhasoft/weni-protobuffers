@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n#weni/protobuf/connect/project.proto\x12\x14weni.connect.project\x1a\x1bgoogle/protobuf/empty.proto\"x\n\x12\x43lassifierResponse\x12\x1a\n\x12\x61uthorization_uuid\x18\x01 \x01(\t\x12\x17\n\x0f\x63lassifier_type\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x11\n\tis_active\x18\x04 \x01(\x08\x12\x0c\n\x04uuid\x18\x05 \x01(\t\"-\n\x15\x43lassifierListRequest\x12\x14\n\x0cproject_uuid\x18\x01 \x01(\t\"z\n\x17\x43lassifierCreateRequest\x12\x14\n\x0cproject_uuid\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x17\n\x0f\x63lassifier_type\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x05 \x01(\t\")\n\x19\x43lassifierRetrieveRequest\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"<\n\x18\x43lassifierDestroyRequest\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x12\n\nuser_email\x18\x02 \x01(\t\"b\n\x14\x43reateChannelRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x14\n\x0cproject_uuid\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\x12\x18\n\x10\x63hanneltype_code\x18\x04 \x01(\t\"T\n\x15\x43reateChannelResponse\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x63onfig\x18\x03 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\";\n\x15ReleaseChannelRequest\x12\x14\n\x0c\x63hannel_uuid\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t2\x82\x05\n\x11ProjectController\x12g\n\nClassifier\x12+.weni.connect.project.ClassifierListRequest\x1a(.weni.connect.project.ClassifierResponse\"\x00\x30\x01\x12m\n\x10\x43reateClassifier\x12-.weni.connect.project.ClassifierCreateRequest\x1a(.weni.connect.project.ClassifierResponse\"\x00\x12j\n\rCreateChannel\x12*.weni.connect.project.CreateChannelRequest\x1a+.weni.connect.project.CreateChannelResponse\"\x00\x12q\n\x12RetrieveClassifier\x12/.weni.connect.project.ClassifierRetrieveRequest\x1a(.weni.connect.project.ClassifierResponse\"\x00\x12]\n\x11\x44\x65stroyClassifier\x12..weni.connect.project.ClassifierDestroyRequest\x1a\x16.google.protobuf.Empty\"\x00\x12W\n\x0eReleaseChannel\x12+.weni.connect.project.ReleaseChannelRequest\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3'
+  serialized_pb=b'\n#weni/protobuf/connect/project.proto\x12\x14weni.connect.project\x1a\x1bgoogle/protobuf/empty.proto\"x\n\x12\x43lassifierResponse\x12\x1a\n\x12\x61uthorization_uuid\x18\x01 \x01(\t\x12\x17\n\x0f\x63lassifier_type\x18\x02 \x01(\t\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x11\n\tis_active\x18\x04 \x01(\x08\x12\x0c\n\x04uuid\x18\x05 \x01(\t\"-\n\x15\x43lassifierListRequest\x12\x14\n\x0cproject_uuid\x18\x01 \x01(\t\"z\n\x17\x43lassifierCreateRequest\x12\x14\n\x0cproject_uuid\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x17\n\x0f\x63lassifier_type\x18\x03 \x01(\t\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65ss_token\x18\x05 \x01(\t\")\n\x19\x43lassifierRetrieveRequest\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"<\n\x18\x43lassifierDestroyRequest\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x12\n\nuser_email\x18\x02 \x01(\t\"N\n\x0f\x43hannelResponse\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x63onfig\x18\x03 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\"*\n\x12\x43hannelListRequest\x12\x14\n\x0c\x63hannel_type\x18\x01 \x01(\t\"b\n\x14\x43reateChannelRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x14\n\x0cproject_uuid\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\x12\x18\n\x10\x63hanneltype_code\x18\x04 \x01(\t\";\n\x15ReleaseChannelRequest\x12\x14\n\x0c\x63hannel_uuid\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t2\xdc\x05\n\x11ProjectController\x12g\n\nClassifier\x12+.weni.connect.project.ClassifierListRequest\x1a(.weni.connect.project.ClassifierResponse\"\x00\x30\x01\x12m\n\x10\x43reateClassifier\x12-.weni.connect.project.ClassifierCreateRequest\x1a(.weni.connect.project.ClassifierResponse\"\x00\x12q\n\x12RetrieveClassifier\x12/.weni.connect.project.ClassifierRetrieveRequest\x1a(.weni.connect.project.ClassifierResponse\"\x00\x12]\n\x11\x44\x65stroyClassifier\x12..weni.connect.project.ClassifierDestroyRequest\x1a\x16.google.protobuf.Empty\"\x00\x12^\n\x07\x43hannel\x12(.weni.connect.project.ChannelListRequest\x1a%.weni.connect.project.ChannelResponse\"\x00\x30\x01\x12\x64\n\rCreateChannel\x12*.weni.connect.project.CreateChannelRequest\x1a%.weni.connect.project.ChannelResponse\"\x00\x12W\n\x0eReleaseChannel\x12+.weni.connect.project.ReleaseChannelRequest\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -250,6 +250,91 @@ _CLASSIFIERDESTROYREQUEST = _descriptor.Descriptor(
 )
 
 
+_CHANNELRESPONSE = _descriptor.Descriptor(
+  name='ChannelResponse',
+  full_name='weni.connect.project.ChannelResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='uuid', full_name='weni.connect.project.ChannelResponse.uuid', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='weni.connect.project.ChannelResponse.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='config', full_name='weni.connect.project.ChannelResponse.config', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='address', full_name='weni.connect.project.ChannelResponse.address', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=488,
+  serialized_end=566,
+)
+
+
+_CHANNELLISTREQUEST = _descriptor.Descriptor(
+  name='ChannelListRequest',
+  full_name='weni.connect.project.ChannelListRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='channel_type', full_name='weni.connect.project.ChannelListRequest.channel_type', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=568,
+  serialized_end=610,
+)
+
+
 _CREATECHANNELREQUEST = _descriptor.Descriptor(
   name='CreateChannelRequest',
   full_name='weni.connect.project.CreateChannelRequest',
@@ -298,61 +383,8 @@ _CREATECHANNELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=488,
-  serialized_end=586,
-)
-
-
-_CREATECHANNELRESPONSE = _descriptor.Descriptor(
-  name='CreateChannelResponse',
-  full_name='weni.connect.project.CreateChannelResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='uuid', full_name='weni.connect.project.CreateChannelResponse.uuid', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='weni.connect.project.CreateChannelResponse.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='config', full_name='weni.connect.project.CreateChannelResponse.config', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='address', full_name='weni.connect.project.CreateChannelResponse.address', index=3,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=588,
-  serialized_end=672,
+  serialized_start=612,
+  serialized_end=710,
 )
 
 
@@ -390,8 +422,8 @@ _RELEASECHANNELREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=674,
-  serialized_end=733,
+  serialized_start=712,
+  serialized_end=771,
 )
 
 DESCRIPTOR.message_types_by_name['ClassifierResponse'] = _CLASSIFIERRESPONSE
@@ -399,8 +431,9 @@ DESCRIPTOR.message_types_by_name['ClassifierListRequest'] = _CLASSIFIERLISTREQUE
 DESCRIPTOR.message_types_by_name['ClassifierCreateRequest'] = _CLASSIFIERCREATEREQUEST
 DESCRIPTOR.message_types_by_name['ClassifierRetrieveRequest'] = _CLASSIFIERRETRIEVEREQUEST
 DESCRIPTOR.message_types_by_name['ClassifierDestroyRequest'] = _CLASSIFIERDESTROYREQUEST
+DESCRIPTOR.message_types_by_name['ChannelResponse'] = _CHANNELRESPONSE
+DESCRIPTOR.message_types_by_name['ChannelListRequest'] = _CHANNELLISTREQUEST
 DESCRIPTOR.message_types_by_name['CreateChannelRequest'] = _CREATECHANNELREQUEST
-DESCRIPTOR.message_types_by_name['CreateChannelResponse'] = _CREATECHANNELRESPONSE
 DESCRIPTOR.message_types_by_name['ReleaseChannelRequest'] = _RELEASECHANNELREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -439,19 +472,26 @@ ClassifierDestroyRequest = _reflection.GeneratedProtocolMessageType('ClassifierD
   })
 _sym_db.RegisterMessage(ClassifierDestroyRequest)
 
+ChannelResponse = _reflection.GeneratedProtocolMessageType('ChannelResponse', (_message.Message,), {
+  'DESCRIPTOR' : _CHANNELRESPONSE,
+  '__module__' : 'weni.protobuf.connect.project_pb2'
+  # @@protoc_insertion_point(class_scope:weni.connect.project.ChannelResponse)
+  })
+_sym_db.RegisterMessage(ChannelResponse)
+
+ChannelListRequest = _reflection.GeneratedProtocolMessageType('ChannelListRequest', (_message.Message,), {
+  'DESCRIPTOR' : _CHANNELLISTREQUEST,
+  '__module__' : 'weni.protobuf.connect.project_pb2'
+  # @@protoc_insertion_point(class_scope:weni.connect.project.ChannelListRequest)
+  })
+_sym_db.RegisterMessage(ChannelListRequest)
+
 CreateChannelRequest = _reflection.GeneratedProtocolMessageType('CreateChannelRequest', (_message.Message,), {
   'DESCRIPTOR' : _CREATECHANNELREQUEST,
   '__module__' : 'weni.protobuf.connect.project_pb2'
   # @@protoc_insertion_point(class_scope:weni.connect.project.CreateChannelRequest)
   })
 _sym_db.RegisterMessage(CreateChannelRequest)
-
-CreateChannelResponse = _reflection.GeneratedProtocolMessageType('CreateChannelResponse', (_message.Message,), {
-  'DESCRIPTOR' : _CREATECHANNELRESPONSE,
-  '__module__' : 'weni.protobuf.connect.project_pb2'
-  # @@protoc_insertion_point(class_scope:weni.connect.project.CreateChannelResponse)
-  })
-_sym_db.RegisterMessage(CreateChannelResponse)
 
 ReleaseChannelRequest = _reflection.GeneratedProtocolMessageType('ReleaseChannelRequest', (_message.Message,), {
   'DESCRIPTOR' : _RELEASECHANNELREQUEST,
@@ -469,8 +509,8 @@ _PROJECTCONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=736,
-  serialized_end=1378,
+  serialized_start=774,
+  serialized_end=1506,
   methods=[
   _descriptor.MethodDescriptor(
     name='Classifier',
@@ -493,19 +533,9 @@ _PROJECTCONTROLLER = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='CreateChannel',
-    full_name='weni.connect.project.ProjectController.CreateChannel',
-    index=2,
-    containing_service=None,
-    input_type=_CREATECHANNELREQUEST,
-    output_type=_CREATECHANNELRESPONSE,
-    serialized_options=None,
-    create_key=_descriptor._internal_create_key,
-  ),
-  _descriptor.MethodDescriptor(
     name='RetrieveClassifier',
     full_name='weni.connect.project.ProjectController.RetrieveClassifier',
-    index=3,
+    index=2,
     containing_service=None,
     input_type=_CLASSIFIERRETRIEVEREQUEST,
     output_type=_CLASSIFIERRESPONSE,
@@ -515,7 +545,7 @@ _PROJECTCONTROLLER = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='DestroyClassifier',
     full_name='weni.connect.project.ProjectController.DestroyClassifier',
-    index=4,
+    index=3,
     containing_service=None,
     input_type=_CLASSIFIERDESTROYREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
@@ -523,9 +553,29 @@ _PROJECTCONTROLLER = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
+    name='Channel',
+    full_name='weni.connect.project.ProjectController.Channel',
+    index=4,
+    containing_service=None,
+    input_type=_CHANNELLISTREQUEST,
+    output_type=_CHANNELRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateChannel',
+    full_name='weni.connect.project.ProjectController.CreateChannel',
+    index=5,
+    containing_service=None,
+    input_type=_CREATECHANNELREQUEST,
+    output_type=_CHANNELRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
     name='ReleaseChannel',
     full_name='weni.connect.project.ProjectController.ReleaseChannel',
-    index=5,
+    index=6,
     containing_service=None,
     input_type=_RELEASECHANNELREQUEST,
     output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
