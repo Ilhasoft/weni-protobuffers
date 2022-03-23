@@ -9,8 +9,8 @@ service ProjectController {
     rpc CreateClassifier(ClassifierCreateRequest) returns (ClassifierResponse) {}
     rpc RetrieveClassifier(ClassifierRetrieveRequest) returns (ClassifierResponse) {}
     rpc DestroyClassifier(ClassifierDestroyRequest) returns (google.protobuf.Empty) {}
-    rpc Channel(ChannelListRequest) returns (stream ChannelResponse) {}
-    rpc CreateChannel(CreateChannelRequest) returns (ChannelResponse) {}
+    rpc Channel(ChannelListRequest) returns (stream ChannelListResponse) {}
+    rpc CreateChannel(CreateChannelRequest) returns (ChannelCreateResponse) {}
     rpc ReleaseChannel(ReleaseChannelRequest) returns (google.protobuf.Empty) {}
 }
 
@@ -43,7 +43,15 @@ message ClassifierDestroyRequest {
     string user_email = 2;
 }
 
-message ChannelResponse {
+message ChannelListResponse {
+    string uuid = 1;
+    string name = 2;
+    string config = 3;
+    string address = 4;
+    string project_uuid = 5;
+}
+
+message ChannelCreateResponse {
     string uuid = 1;
     string name = 2;
     string config = 3;
