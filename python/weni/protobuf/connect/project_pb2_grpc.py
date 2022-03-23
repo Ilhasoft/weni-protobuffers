@@ -38,12 +38,12 @@ class ProjectControllerStub(object):
         self.Channel = channel.unary_stream(
                 '/weni.connect.project.ProjectController/Channel',
                 request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.FromString,
+                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListResponse.FromString,
                 )
         self.CreateChannel = channel.unary_unary(
                 '/weni.connect.project.ProjectController/CreateChannel',
                 request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.FromString,
+                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.FromString,
                 )
         self.ReleaseChannel = channel.unary_unary(
                 '/weni.connect.project.ProjectController/ReleaseChannel',
@@ -123,12 +123,12 @@ def add_ProjectControllerServicer_to_server(servicer, server):
             'Channel': grpc.unary_stream_rpc_method_handler(
                     servicer.Channel,
                     request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.SerializeToString,
+                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListResponse.SerializeToString,
             ),
             'CreateChannel': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateChannel,
                     request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.SerializeToString,
+                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.SerializeToString,
             ),
             'ReleaseChannel': grpc.unary_unary_rpc_method_handler(
                     servicer.ReleaseChannel,
@@ -226,7 +226,7 @@ class ProjectController(object):
             metadata=None):
         return grpc.experimental.unary_stream(request, target, '/weni.connect.project.ProjectController/Channel',
             weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListRequest.SerializeToString,
-            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.FromString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelListResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -243,7 +243,7 @@ class ProjectController(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/CreateChannel',
             weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.SerializeToString,
-            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelResponse.FromString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
