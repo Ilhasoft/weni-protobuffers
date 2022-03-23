@@ -1,4 +1,8 @@
 ## [Unreleased]
+## [1.2.10] - 2022-03-23
+### Added
+- `project_uuid` to ChannelListResponse
+
 ## [1.2.9] - 2022-18-03
 ### Added
 - Add new message named ChannelListRequest
