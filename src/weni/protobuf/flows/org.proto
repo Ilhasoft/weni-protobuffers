@@ -19,6 +19,7 @@ message Org {
     string timezone = 4;
     string date_format = 5;
     repeated User users = 6;
+    optional bool is_active = 7;
 }
 
 message User {
