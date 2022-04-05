@@ -62,5 +62,4 @@ message OrgUpdateRequest {
     optional bool is_multi_user = 10;
     optional bool is_multi_org = 11;
     optional bool is_suspended = 12;
-    optional bool is_active = 13;
 }
