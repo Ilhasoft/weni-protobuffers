@@ -1,4 +1,9 @@
 ## [Unreleased]
+
+## [1.2.11] - 2022-04-05
+### Added
+- README.md
+
 ## [1.2.10] - 2022-03-23
 ### Added
 - `project_uuid` to ChannelListResponse
