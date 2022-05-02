@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## [1.2.13] - 2022-05-02
+- Added permission type to Users objects related to a specific org.
+
 ## [1.2.12] - 2022-04-18
 This patch does not have any changes, it aims to resolve conflicts between pypi and the tags of this repository
 
