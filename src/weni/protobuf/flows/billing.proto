@@ -46,8 +46,8 @@ message ActiveContactDetail {
 }
 
 message IncomingMessageRequest{
-    string org = 1;
-    string contact_id = 2;
+    string org_uuid = 1;
+    string contact_uuid = 2;
     string before = 3;
     string after = 4;
 }

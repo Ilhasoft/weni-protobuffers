@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!weni/protobuf/flows/billing.proto\x12\x12weni.flows.billing\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x0e\x42illingRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x0e\n\x06\x62\x65\x66ore\x18\x02 \x01(\t\x12\r\n\x05\x61\x66ter\x18\x03 \x01(\t\"(\n\rTotalResponse\x12\x17\n\x0f\x61\x63tive_contacts\x18\x01 \x01(\x05\"\x80\x01\n\x03Msg\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12+\n\x07sent_on\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x30\n\tdirection\x18\x04 \x01(\x0e\x32\x1d.weni.flows.billing.Direction\"%\n\x07\x43hannel\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x85\x01\n\x13\x41\x63tiveContactDetail\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12$\n\x03msg\x18\x03 \x01(\x0b\x32\x17.weni.flows.billing.Msg\x12,\n\x07\x63hannel\x18\x04 \x01(\x0b\x32\x1b.weni.flows.billing.Channel\"X\n\x16IncomingMessageRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x12\n\ncontact_id\x18\x02 \x01(\t\x12\x0e\n\x06\x62\x65\x66ore\x18\x03 \x01(\t\x12\r\n\x05\x61\x66ter\x18\x04 \x01(\t\"o\n\x0bIncomingMsg\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12\x12\n\ncreated_on\x18\x03 \x01(\t\x12\x30\n\tdirection\x18\x04 \x01(\x0e\x32\x1d.weni.flows.billing.Direction*\"\n\tDirection\x12\t\n\x05INPUT\x10\x00\x12\n\n\x06OUTPUT\x10\x01\x32\xa4\x02\n\x11\x42illingController\x12P\n\x05Total\x12\".weni.flows.billing.BillingRequest\x1a!.weni.flows.billing.TotalResponse\"\x00\x12[\n\x08\x44\x65tailed\x12\".weni.flows.billing.BillingRequest\x1a\'.weni.flows.billing.ActiveContactDetail\"\x00\x30\x01\x12`\n\x0fIncomingMessage\x12*.weni.flows.billing.IncomingMessageRequest\x1a\x1f.weni.flows.billing.IncomingMsg\"\x00\x62\x06proto3'
+  serialized_pb=b'\n!weni/protobuf/flows/billing.proto\x12\x12weni.flows.billing\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x0e\x42illingRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x0e\n\x06\x62\x65\x66ore\x18\x02 \x01(\t\x12\r\n\x05\x61\x66ter\x18\x03 \x01(\t\"(\n\rTotalResponse\x12\x17\n\x0f\x61\x63tive_contacts\x18\x01 \x01(\x05\"\x80\x01\n\x03Msg\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12+\n\x07sent_on\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x30\n\tdirection\x18\x04 \x01(\x0e\x32\x1d.weni.flows.billing.Direction\"%\n\x07\x43hannel\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x85\x01\n\x13\x41\x63tiveContactDetail\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12$\n\x03msg\x18\x03 \x01(\x0b\x32\x17.weni.flows.billing.Msg\x12,\n\x07\x63hannel\x18\x04 \x01(\x0b\x32\x1b.weni.flows.billing.Channel\"_\n\x16IncomingMessageRequest\x12\x10\n\x08org_uuid\x18\x01 \x01(\t\x12\x14\n\x0c\x63ontact_uuid\x18\x02 \x01(\t\x12\x0e\n\x06\x62\x65\x66ore\x18\x03 \x01(\t\x12\r\n\x05\x61\x66ter\x18\x04 \x01(\t\"o\n\x0bIncomingMsg\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12\x12\n\ncreated_on\x18\x03 \x01(\t\x12\x30\n\tdirection\x18\x04 \x01(\x0e\x32\x1d.weni.flows.billing.Direction*\"\n\tDirection\x12\t\n\x05INPUT\x10\x00\x12\n\n\x06OUTPUT\x10\x01\x32\xa4\x02\n\x11\x42illingController\x12P\n\x05Total\x12\".weni.flows.billing.BillingRequest\x1a!.weni.flows.billing.TotalResponse\"\x00\x12[\n\x08\x44\x65tailed\x12\".weni.flows.billing.BillingRequest\x1a\'.weni.flows.billing.ActiveContactDetail\"\x00\x30\x01\x12`\n\x0fIncomingMessage\x12*.weni.flows.billing.IncomingMessageRequest\x1a\x1f.weni.flows.billing.IncomingMsg\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -45,8 +45,8 @@ _DIRECTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=703,
-  serialized_end=737,
+  serialized_start=710,
+  serialized_end=744,
 )
 _sym_db.RegisterEnumDescriptor(_DIRECTION)
 
@@ -288,14 +288,14 @@ _INCOMINGMESSAGEREQUEST = _descriptor.Descriptor(
   create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
-      name='org', full_name='weni.flows.billing.IncomingMessageRequest.org', index=0,
+      name='org_uuid', full_name='weni.flows.billing.IncomingMessageRequest.org_uuid', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='contact_id', full_name='weni.flows.billing.IncomingMessageRequest.contact_id', index=1,
+      name='contact_uuid', full_name='weni.flows.billing.IncomingMessageRequest.contact_uuid', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -328,7 +328,7 @@ _INCOMINGMESSAGEREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=500,
-  serialized_end=588,
+  serialized_end=595,
 )
 
 
@@ -380,8 +380,8 @@ _INCOMINGMSG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=590,
-  serialized_end=701,
+  serialized_start=597,
+  serialized_end=708,
 )
 
 _MSG.fields_by_name['sent_on'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -457,8 +457,8 @@ _BILLINGCONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=740,
-  serialized_end=1032,
+  serialized_start=747,
+  serialized_end=1039,
   methods=[
   _descriptor.MethodDescriptor(
     name='Total',
