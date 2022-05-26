@@ -24,10 +24,10 @@ class BillingControllerStub(object):
                 request_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.ActiveContactDetail.FromString,
                 )
-        self.IncomingMessage = channel.unary_unary(
-                '/weni.flows.billing.BillingController/IncomingMessage',
-                request_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.IncomingMessageRequest.SerializeToString,
-                response_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.IncomingMsg.FromString,
+        self.MessageDetail = channel.unary_unary(
+                '/weni.flows.billing.BillingController/MessageDetail',
+                request_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.MessageDetailRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.MsgDetail.FromString,
                 )
 
 
@@ -47,7 +47,7 @@ class BillingControllerServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def IncomingMessage(self, request, context):
+    def MessageDetail(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -66,10 +66,10 @@ def add_BillingControllerServicer_to_server(servicer, server):
                     request_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.BillingRequest.FromString,
                     response_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.ActiveContactDetail.SerializeToString,
             ),
-            'IncomingMessage': grpc.unary_unary_rpc_method_handler(
-                    servicer.IncomingMessage,
-                    request_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.IncomingMessageRequest.FromString,
-                    response_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.IncomingMsg.SerializeToString,
+            'MessageDetail': grpc.unary_unary_rpc_method_handler(
+                    servicer.MessageDetail,
+                    request_deserializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.MessageDetailRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_flows_dot_billing__pb2.MsgDetail.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -116,7 +116,7 @@ class BillingController(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def IncomingMessage(request,
+    def MessageDetail(request,
             target,
             options=(),
             channel_credentials=None,
@@ -126,8 +126,8 @@ class BillingController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/weni.flows.billing.BillingController/IncomingMessage',
-            weni_dot_protobuf_dot_flows_dot_billing__pb2.IncomingMessageRequest.SerializeToString,
-            weni_dot_protobuf_dot_flows_dot_billing__pb2.IncomingMsg.FromString,
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.billing.BillingController/MessageDetail',
+            weni_dot_protobuf_dot_flows_dot_billing__pb2.MessageDetailRequest.SerializeToString,
+            weni_dot_protobuf_dot_flows_dot_billing__pb2.MsgDetail.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

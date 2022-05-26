@@ -8,7 +8,7 @@ service BillingController {
     // Get the total or active contacts in a time range
     rpc Total(BillingRequest) returns (TotalResponse){}
     rpc Detailed(BillingRequest) returns (stream ActiveContactDetail){}
-    rpc IncomingMessage(IncomingMessageRequest) returns (IncomingMsg) {}
+    rpc MessageDetail(MessageDetailRequest) returns (MsgDetail) {}
 }
 
 message BillingRequest {
@@ -45,14 +45,14 @@ message ActiveContactDetail {
     Channel channel = 4;
 }
 
-message IncomingMessageRequest{
+message MessageDetailRequest{
     string org_uuid = 1;
     string contact_uuid = 2;
     string before = 3;
     string after = 4;
 }
 
-message IncomingMsg {
+message MsgDetail {
     string uuid = 1;
     string text = 2;
     string created_on = 3;
