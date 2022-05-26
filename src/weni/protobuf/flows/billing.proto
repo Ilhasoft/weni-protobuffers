@@ -57,6 +57,6 @@ message IncomingMsg {
     string text = 2;
     string created_on = 3;
     string direction = 4;
-    string channel_id = 5;
+    int32 channel_id = 5;
     string channel_type = 6;
 }
