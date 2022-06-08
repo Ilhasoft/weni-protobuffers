@@ -11,6 +11,7 @@ service ProjectController {
     rpc DestroyClassifier(ClassifierDestroyRequest) returns (google.protobuf.Empty) {}
     rpc Channel(ChannelListRequest) returns (stream ChannelListResponse) {}
     rpc CreateChannel(CreateChannelRequest) returns (ChannelCreateResponse) {}
+    rpc CreateWACChannel(ChannelWACCreateRequest) returns (ChannelCreateResponse) {}
     rpc ReleaseChannel(ReleaseChannelRequest) returns (google.protobuf.Empty) {}
 }
 
@@ -67,6 +68,13 @@ message CreateChannelRequest {
     string project_uuid = 2;
     string data = 3;
     string channeltype_code = 4;
+}
+
+message ChannelWACCreateRequest {
+    string org = 1;
+    string user = 2;
+    string phone_number_id = 3;
+    string config = 4;
 }
 
 message ReleaseChannelRequest {
