@@ -20,6 +20,11 @@ class ChannelControllerStub(object):
                 request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
                 )
+        self.CreateWAC = channel.unary_unary(
+                '/weni.flows.channel.ChannelController/CreateWAC',
+                request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelWACCreateRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
+                )
         self.Retrieve = channel.unary_unary(
                 '/weni.flows.channel.ChannelController/Retrieve',
                 request_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelRetrieveRequest.SerializeToString,
@@ -41,6 +46,12 @@ class ChannelControllerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def Create(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def CreateWAC(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -70,6 +81,11 @@ def add_ChannelControllerServicer_to_server(servicer, server):
             'Create': grpc.unary_unary_rpc_method_handler(
                     servicer.Create,
                     request_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.SerializeToString,
+            ),
+            'CreateWAC': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateWAC,
+                    request_deserializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelWACCreateRequest.FromString,
                     response_serializer=weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.SerializeToString,
             ),
             'Retrieve': grpc.unary_unary_rpc_method_handler(
@@ -110,6 +126,23 @@ class ChannelController(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.flows.channel.ChannelController/Create',
             weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelCreateRequest.SerializeToString,
+            weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def CreateWAC(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/weni.flows.channel.ChannelController/CreateWAC',
+            weni_dot_protobuf_dot_flows_dot_channel__pb2.ChannelWACCreateRequest.SerializeToString,
             weni_dot_protobuf_dot_flows_dot_channel__pb2.Channel.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
