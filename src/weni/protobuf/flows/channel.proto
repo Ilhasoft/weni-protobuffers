@@ -6,6 +6,7 @@ import "google/protobuf/empty.proto";
 
 service ChannelController {
     rpc Create (ChannelCreateRequest) returns (Channel);
+    rpc CreateWAC (ChannelWACCreateRequest) returns (Channel);
     rpc Retrieve (ChannelRetrieveRequest) returns (Channel);
     rpc List (ChannelListRequest) returns (stream Channel);
     rpc Destroy(ChannelDestroyRequest) returns (google.protobuf.Empty) {}
@@ -13,6 +14,13 @@ service ChannelController {
 
 service WeniWebChatController {
     rpc Create(WeniWebChatCreateRequest) returns (WeniWebChat) {}
+}
+
+message ChannelWACCreateRequest{
+    string org = 1;
+    string user = 2;
+    string phone_number_id = 3;
+    string config = 4;
 }
 
 message ChannelCreateRequest {
