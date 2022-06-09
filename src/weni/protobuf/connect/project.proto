@@ -71,8 +71,8 @@ message CreateChannelRequest {
 }
 
 message ChannelWACCreateRequest {
-    string org = 1;
-    string user = 2;
+    string user = 1;
+    string project_uuid = 2;
     string phone_number_id = 3;
     string config = 4;
 }
