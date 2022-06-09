@@ -45,6 +45,11 @@ class ProjectControllerStub(object):
                 request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.SerializeToString,
                 response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.FromString,
                 )
+        self.CreateWACChannel = channel.unary_unary(
+                '/weni.connect.project.ProjectController/CreateWACChannel',
+                request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelWACCreateRequest.SerializeToString,
+                response_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.FromString,
+                )
         self.ReleaseChannel = channel.unary_unary(
                 '/weni.connect.project.ProjectController/ReleaseChannel',
                 request_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ReleaseChannelRequest.SerializeToString,
@@ -91,6 +96,12 @@ class ProjectControllerServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def CreateWACChannel(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
     def ReleaseChannel(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -128,6 +139,11 @@ def add_ProjectControllerServicer_to_server(servicer, server):
             'CreateChannel': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateChannel,
                     request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.FromString,
+                    response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.SerializeToString,
+            ),
+            'CreateWACChannel': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateWACChannel,
+                    request_deserializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelWACCreateRequest.FromString,
                     response_serializer=weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.SerializeToString,
             ),
             'ReleaseChannel': grpc.unary_unary_rpc_method_handler(
@@ -243,6 +259,23 @@ class ProjectController(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/CreateChannel',
             weni_dot_protobuf_dot_connect_dot_project__pb2.CreateChannelRequest.SerializeToString,
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def CreateWACChannel(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/weni.connect.project.ProjectController/CreateWACChannel',
+            weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelWACCreateRequest.SerializeToString,
             weni_dot_protobuf_dot_connect_dot_project__pb2.ChannelCreateResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
