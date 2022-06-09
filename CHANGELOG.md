@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.2.14] - 2022-06-08
+- Add ChannelWACCreate endpoint
+- Add WhatsApp cloud channel endpoint to connect
+
 ## [1.2.13] - 2022-05-02
 - Added permission type to Users objects related to a specific org.
 
