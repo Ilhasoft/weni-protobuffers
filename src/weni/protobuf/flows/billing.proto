@@ -59,4 +59,5 @@ message MsgDetail {
     string direction = 4;
     int32 channel_id = 5;
     string channel_type = 6;
+    bool is_valid = 7;
 }
