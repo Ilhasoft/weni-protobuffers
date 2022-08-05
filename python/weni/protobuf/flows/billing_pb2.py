@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!weni/protobuf/flows/billing.proto\x12\x12weni.flows.billing\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x0e\x42illingRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x0e\n\x06\x62\x65\x66ore\x18\x02 \x01(\t\x12\r\n\x05\x61\x66ter\x18\x03 \x01(\t\"(\n\rTotalResponse\x12\x17\n\x0f\x61\x63tive_contacts\x18\x01 \x01(\x05\"\x80\x01\n\x03Msg\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12+\n\x07sent_on\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x30\n\tdirection\x18\x04 \x01(\x0e\x32\x1d.weni.flows.billing.Direction\"%\n\x07\x43hannel\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\"\x85\x01\n\x13\x41\x63tiveContactDetail\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12$\n\x03msg\x18\x03 \x01(\x0b\x32\x17.weni.flows.billing.Msg\x12,\n\x07\x63hannel\x18\x04 \x01(\x0b\x32\x1b.weni.flows.billing.Channel\"]\n\x14MessageDetailRequest\x12\x10\n\x08org_uuid\x18\x01 \x01(\t\x12\x14\n\x0c\x63ontact_uuid\x18\x02 \x01(\t\x12\x0e\n\x06\x62\x65\x66ore\x18\x03 \x01(\t\x12\r\n\x05\x61\x66ter\x18\x04 \x01(\t\"x\n\tMsgDetail\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12\x12\n\ncreated_on\x18\x03 \x01(\t\x12\x11\n\tdirection\x18\x04 \x01(\t\x12\x12\n\nchannel_id\x18\x05 \x01(\x05\x12\x14\n\x0c\x63hannel_type\x18\x06 \x01(\t*\"\n\tDirection\x12\t\n\x05INPUT\x10\x00\x12\n\n\x06OUTPUT\x10\x01\x32\x9e\x02\n\x11\x42illingController\x12P\n\x05Total\x12\".weni.flows.billing.BillingRequest\x1a!.weni.flows.billing.TotalResponse\"\x00\x12[\n\x08\x44\x65tailed\x12\".weni.flows.billing.BillingRequest\x1a\'.weni.flows.billing.ActiveContactDetail\"\x00\x30\x01\x12Z\n\rMessageDetail\x12(.weni.flows.billing.MessageDetailRequest\x1a\x1d.weni.flows.billing.MsgDetail\"\x00\x62\x06proto3'
+  serialized_pb=b'\n!weni/protobuf/flows/billing.proto\x12\x12weni.flows.billing\x1a\x1fgoogle/protobuf/timestamp.proto\"<\n\x0e\x42illingRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x0e\n\x06\x62\x65\x66ore\x18\x02 \x01(\t\x12\r\n\x05\x61\x66ter\x18\x03 \x01(\t\"(\n\rTotalResponse\x12\x17\n\x0f\x61\x63tive_contacts\x18\x01 \x01(\x05\"\x80\x01\n\x03Msg\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12+\n\x07sent_on\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x30\n\tdirection\x18\x04 \x01(\x0e\x32\x1d.weni.flows.billing.Direction\"9\n\x07\x43hannel\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x12\n\nchannel_id\x18\x02 \x01(\x05\x12\x0c\n\x04name\x18\x03 \x01(\t\"\x85\x01\n\x13\x41\x63tiveContactDetail\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12$\n\x03msg\x18\x03 \x01(\x0b\x32\x17.weni.flows.billing.Msg\x12,\n\x07\x63hannel\x18\x04 \x01(\x0b\x32\x1b.weni.flows.billing.Channel\"]\n\x14MessageDetailRequest\x12\x10\n\x08org_uuid\x18\x01 \x01(\t\x12\x14\n\x0c\x63ontact_uuid\x18\x02 \x01(\t\x12\x0e\n\x06\x62\x65\x66ore\x18\x03 \x01(\t\x12\r\n\x05\x61\x66ter\x18\x04 \x01(\t\"x\n\tMsgDetail\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04text\x18\x02 \x01(\t\x12\x12\n\ncreated_on\x18\x03 \x01(\t\x12\x11\n\tdirection\x18\x04 \x01(\t\x12\x12\n\nchannel_id\x18\x05 \x01(\x05\x12\x14\n\x0c\x63hannel_type\x18\x06 \x01(\t*\"\n\tDirection\x12\t\n\x05INPUT\x10\x00\x12\n\n\x06OUTPUT\x10\x01\x32\x9e\x02\n\x11\x42illingController\x12P\n\x05Total\x12\".weni.flows.billing.BillingRequest\x1a!.weni.flows.billing.TotalResponse\"\x00\x12[\n\x08\x44\x65tailed\x12\".weni.flows.billing.BillingRequest\x1a\'.weni.flows.billing.ActiveContactDetail\"\x00\x30\x01\x12Z\n\rMessageDetail\x12(.weni.flows.billing.MessageDetailRequest\x1a\x1d.weni.flows.billing.MsgDetail\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -45,8 +45,8 @@ _DIRECTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=717,
-  serialized_end=751,
+  serialized_start=737,
+  serialized_end=771,
 )
 _sym_db.RegisterEnumDescriptor(_DIRECTION)
 
@@ -203,8 +203,15 @@ _CHANNEL = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='name', full_name='weni.flows.billing.Channel.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='channel_id', full_name='weni.flows.billing.Channel.channel_id', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='weni.flows.billing.Channel.name', index=2,
+      number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -222,7 +229,7 @@ _CHANNEL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=325,
-  serialized_end=362,
+  serialized_end=382,
 )
 
 
@@ -274,8 +281,8 @@ _ACTIVECONTACTDETAIL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=365,
-  serialized_end=498,
+  serialized_start=385,
+  serialized_end=518,
 )
 
 
@@ -327,8 +334,8 @@ _MESSAGEDETAILREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=500,
-  serialized_end=593,
+  serialized_start=520,
+  serialized_end=613,
 )
 
 
@@ -394,8 +401,8 @@ _MSGDETAIL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=595,
-  serialized_end=715,
+  serialized_start=615,
+  serialized_end=735,
 )
 
 _MSG.fields_by_name['sent_on'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
@@ -470,8 +477,8 @@ _BILLINGCONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=754,
-  serialized_end=1040,
+  serialized_start=774,
+  serialized_end=1060,
   methods=[
   _descriptor.MethodDescriptor(
     name='Total',

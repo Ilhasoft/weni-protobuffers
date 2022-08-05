@@ -35,7 +35,8 @@ message Msg {
 
 message Channel {
     string uuid = 1;
-    string name = 2;
+    int32 channel_id = 2;
+    string name = 3;
 }
 
 message ActiveContactDetail {
