@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!weni/protobuf/flows/channel.proto\x12\x12weni.flows.channel\x1a\x1bgoogle/protobuf/empty.proto\"]\n\x17\x43hannelWACCreateRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x17\n\x0fphone_number_id\x18\x03 \x01(\t\x12\x0e\n\x06\x63onfig\x18\x04 \x01(\t\"Y\n\x14\x43hannelCreateRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0b\n\x03org\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\x12\x18\n\x10\x63hanneltype_code\x18\x04 \x01(\t\"&\n\x16\x43hannelRetrieveRequest\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"7\n\x12\x43hannelListRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x14\n\x0c\x63hannel_type\x18\x02 \x01(\t\"F\n\x07\x43hannel\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x63onfig\x18\x03 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\"3\n\x15\x43hannelDestroyRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0c\n\x04uuid\x18\x02 \x01(\t\"U\n\x18WeniWebChatCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x10\n\x08\x62\x61se_url\x18\x03 \x01(\t\x12\x0b\n\x03org\x18\x04 \x01(\t\"\x1b\n\x0bWeniWebChat\x12\x0c\n\x04uuid\x18\x01 \x01(\t2\xaf\x03\n\x11\x43hannelController\x12O\n\x06\x43reate\x12(.weni.flows.channel.ChannelCreateRequest\x1a\x1b.weni.flows.channel.Channel\x12U\n\tCreateWAC\x12+.weni.flows.channel.ChannelWACCreateRequest\x1a\x1b.weni.flows.channel.Channel\x12S\n\x08Retrieve\x12*.weni.flows.channel.ChannelRetrieveRequest\x1a\x1b.weni.flows.channel.Channel\x12M\n\x04List\x12&.weni.flows.channel.ChannelListRequest\x1a\x1b.weni.flows.channel.Channel0\x01\x12N\n\x07\x44\x65stroy\x12).weni.flows.channel.ChannelDestroyRequest\x1a\x16.google.protobuf.Empty\"\x00\x32r\n\x15WeniWebChatController\x12Y\n\x06\x43reate\x12,.weni.flows.channel.WeniWebChatCreateRequest\x1a\x1f.weni.flows.channel.WeniWebChat\"\x00\x62\x06proto3'
+  serialized_pb=b'\n!weni/protobuf/flows/channel.proto\x12\x12weni.flows.channel\x1a\x1bgoogle/protobuf/empty.proto\"]\n\x17\x43hannelWACCreateRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x17\n\x0fphone_number_id\x18\x03 \x01(\t\x12\x0e\n\x06\x63onfig\x18\x04 \x01(\t\"Y\n\x14\x43hannelCreateRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0b\n\x03org\x18\x02 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\x12\x18\n\x10\x63hanneltype_code\x18\x04 \x01(\t\"&\n\x16\x43hannelRetrieveRequest\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"J\n\x12\x43hannelListRequest\x12\x0b\n\x03org\x18\x01 \x01(\t\x12\x14\n\x0c\x63hannel_type\x18\x02 \x01(\t\x12\x11\n\tis_active\x18\x03 \x01(\t\"f\n\x07\x43hannel\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06\x63onfig\x18\x03 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x04 \x01(\t\x12\x0b\n\x03org\x18\x05 \x01(\t\x12\x11\n\tis_active\x18\x06 \x01(\x08\"3\n\x15\x43hannelDestroyRequest\x12\x0c\n\x04user\x18\x01 \x01(\t\x12\x0c\n\x04uuid\x18\x02 \x01(\t\"U\n\x18WeniWebChatCreateRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04user\x18\x02 \x01(\t\x12\x10\n\x08\x62\x61se_url\x18\x03 \x01(\t\x12\x0b\n\x03org\x18\x04 \x01(\t\"\x1b\n\x0bWeniWebChat\x12\x0c\n\x04uuid\x18\x01 \x01(\t2\xaf\x03\n\x11\x43hannelController\x12O\n\x06\x43reate\x12(.weni.flows.channel.ChannelCreateRequest\x1a\x1b.weni.flows.channel.Channel\x12U\n\tCreateWAC\x12+.weni.flows.channel.ChannelWACCreateRequest\x1a\x1b.weni.flows.channel.Channel\x12S\n\x08Retrieve\x12*.weni.flows.channel.ChannelRetrieveRequest\x1a\x1b.weni.flows.channel.Channel\x12M\n\x04List\x12&.weni.flows.channel.ChannelListRequest\x1a\x1b.weni.flows.channel.Channel0\x01\x12N\n\x07\x44\x65stroy\x12).weni.flows.channel.ChannelDestroyRequest\x1a\x16.google.protobuf.Empty\"\x00\x32r\n\x15WeniWebChatController\x12Y\n\x06\x43reate\x12,.weni.flows.channel.WeniWebChatCreateRequest\x1a\x1f.weni.flows.channel.WeniWebChat\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -187,6 +187,13 @@ _CHANNELLISTREQUEST = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='is_active', full_name='weni.flows.channel.ChannelListRequest.is_active', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -200,7 +207,7 @@ _CHANNELLISTREQUEST = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=312,
-  serialized_end=367,
+  serialized_end=386,
 )
 
 
@@ -240,6 +247,20 @@ _CHANNEL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='org', full_name='weni.flows.channel.Channel.org', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='is_active', full_name='weni.flows.channel.Channel.is_active', index=5,
+      number=6, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -252,8 +273,8 @@ _CHANNEL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=369,
-  serialized_end=439,
+  serialized_start=388,
+  serialized_end=490,
 )
 
 
@@ -291,8 +312,8 @@ _CHANNELDESTROYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=441,
-  serialized_end=492,
+  serialized_start=492,
+  serialized_end=543,
 )
 
 
@@ -344,8 +365,8 @@ _WENIWEBCHATCREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=494,
-  serialized_end=579,
+  serialized_start=545,
+  serialized_end=630,
 )
 
 
@@ -376,8 +397,8 @@ _WENIWEBCHAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=581,
-  serialized_end=608,
+  serialized_start=632,
+  serialized_end=659,
 )
 
 DESCRIPTOR.message_types_by_name['ChannelWACCreateRequest'] = _CHANNELWACCREATEREQUEST
@@ -455,8 +476,8 @@ _CHANNELCONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=611,
-  serialized_end=1042,
+  serialized_start=662,
+  serialized_end=1093,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',
@@ -521,8 +542,8 @@ _WENIWEBCHATCONTROLLER = _descriptor.ServiceDescriptor(
   index=1,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1044,
-  serialized_end=1158,
+  serialized_start=1095,
+  serialized_end=1209,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',

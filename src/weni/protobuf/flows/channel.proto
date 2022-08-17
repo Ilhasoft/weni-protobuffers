@@ -37,6 +37,7 @@ message ChannelRetrieveRequest {
 message ChannelListRequest {
     string org = 1;
     string channel_type = 2;
+    string is_active = 3;
 }
 
 message Channel {
@@ -44,6 +45,8 @@ message Channel {
     string name = 2;
     string config = 3;
     string address = 4;
+    string org = 5;
+    bool is_active = 6;
 }
 
 message ChannelDestroyRequest {
