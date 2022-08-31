@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## [1.2.17] - 2022-08-31
+- Add new fields in the channel listing
+
 ## [1.2.16] - 2022-08-05
 - Add channel_id field to Channel class in billing
 
