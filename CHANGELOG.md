@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## [1.2.16] - 2022-08-05
+- Add channel_id field to Channel class in billing
+
 ## [1.2.15] - 2022-06-09
 - Add some details to Message endpoint
 
