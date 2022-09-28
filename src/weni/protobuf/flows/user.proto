@@ -29,6 +29,7 @@ message Permission {
     bool viewer = 2;
     bool editor = 3;
     bool surveyor = 4;
+    bool agent = 5;
 }
 
 message UserRetrieveRequest {
