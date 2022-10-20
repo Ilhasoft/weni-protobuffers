@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+## [1.2.18] - 2022-10-07
+- Add agent field to Permission message
+
 ## [1.2.17] - 2022-08-31
 - Add new fields in the channel listing
 
