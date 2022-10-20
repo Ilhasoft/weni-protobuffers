@@ -11,7 +11,14 @@ message FlowListRequest {
     string org_uuid = 2;
 }
 
+message Trigger {
+    string keyword = 1;
+    string trigger_type = 2;
+    int32 id = 3;
+}
+
 message Flow {
     string uuid = 1;
     string name = 2;
+    repeated Trigger triggers = 3;
 }

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1eweni/protobuf/flows/flow.proto\x12\x0fweni.flows.flow\"6\n\x0f\x46lowListRequest\x12\x11\n\tflow_name\x18\x01 \x01(\t\x12\x10\n\x08org_uuid\x18\x02 \x01(\t\"\"\n\x04\x46low\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t2U\n\x0e\x46lowController\x12\x43\n\x04List\x12 .weni.flows.flow.FlowListRequest\x1a\x15.weni.flows.flow.Flow\"\x00\x30\x01\x62\x06proto3'
+  serialized_pb=b'\n\x1eweni/protobuf/flows/flow.proto\x12\x0fweni.flows.flow\"6\n\x0f\x46lowListRequest\x12\x11\n\tflow_name\x18\x01 \x01(\t\x12\x10\n\x08org_uuid\x18\x02 \x01(\t\"<\n\x07Trigger\x12\x0f\n\x07keyword\x18\x01 \x01(\t\x12\x14\n\x0ctrigger_type\x18\x02 \x01(\t\x12\n\n\x02id\x18\x03 \x01(\x05\"N\n\x04\x46low\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12*\n\x08triggers\x18\x03 \x03(\x0b\x32\x18.weni.flows.flow.Trigger2U\n\x0e\x46lowController\x12\x43\n\x04List\x12 .weni.flows.flow.FlowListRequest\x1a\x15.weni.flows.flow.Flow\"\x00\x30\x01\x62\x06proto3'
 )
 
 
@@ -64,6 +64,52 @@ _FLOWLISTREQUEST = _descriptor.Descriptor(
 )
 
 
+_TRIGGER = _descriptor.Descriptor(
+  name='Trigger',
+  full_name='weni.flows.flow.Trigger',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='keyword', full_name='weni.flows.flow.Trigger.keyword', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='trigger_type', full_name='weni.flows.flow.Trigger.trigger_type', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='id', full_name='weni.flows.flow.Trigger.id', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=107,
+  serialized_end=167,
+)
+
+
 _FLOW = _descriptor.Descriptor(
   name='Flow',
   full_name='weni.flows.flow.Flow',
@@ -86,6 +132,13 @@ _FLOW = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='triggers', full_name='weni.flows.flow.Flow.triggers', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -98,11 +151,13 @@ _FLOW = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=107,
-  serialized_end=141,
+  serialized_start=169,
+  serialized_end=247,
 )
 
+_FLOW.fields_by_name['triggers'].message_type = _TRIGGER
 DESCRIPTOR.message_types_by_name['FlowListRequest'] = _FLOWLISTREQUEST
+DESCRIPTOR.message_types_by_name['Trigger'] = _TRIGGER
 DESCRIPTOR.message_types_by_name['Flow'] = _FLOW
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -112,6 +167,13 @@ FlowListRequest = _reflection.GeneratedProtocolMessageType('FlowListRequest', (_
   # @@protoc_insertion_point(class_scope:weni.flows.flow.FlowListRequest)
   })
 _sym_db.RegisterMessage(FlowListRequest)
+
+Trigger = _reflection.GeneratedProtocolMessageType('Trigger', (_message.Message,), {
+  'DESCRIPTOR' : _TRIGGER,
+  '__module__' : 'weni.protobuf.flows.flow_pb2'
+  # @@protoc_insertion_point(class_scope:weni.flows.flow.Trigger)
+  })
+_sym_db.RegisterMessage(Trigger)
 
 Flow = _reflection.GeneratedProtocolMessageType('Flow', (_message.Message,), {
   'DESCRIPTOR' : _FLOW,
@@ -129,8 +191,8 @@ _FLOWCONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=143,
-  serialized_end=228,
+  serialized_start=249,
+  serialized_end=334,
   methods=[
   _descriptor.MethodDescriptor(
     name='List',
